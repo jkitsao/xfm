@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import '../styles/home.css'
+import '../styles/Home.css'
 
 import { AppProps } from 'next/app';
 import Head from 'next/head';
