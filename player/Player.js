@@ -38,11 +38,11 @@ function Player() {
 
     return (
         <div className="bg-clip-padding   rounded-md backdrop-filter backdrop-blur-xl bg-opacity-40  shadow-xl m-3 p-4 py-6">
-            {/* <div className='py-2 px-3'>
+            <div className='py-2 px-3'>
                 <Text weight={400}>
                     <NowPlaying />
                 </Text>
-            </div> */}
+            </div>
             <div className='flex justify-center '>
                 {!isPlayin ? <Image src='/xfmbg.png' height={100}
                     width={260}
