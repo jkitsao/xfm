@@ -4,6 +4,8 @@ import { Audio as AudioSvg } from 'react-loader-spinner'
 import { Slider } from '@mantine/core';
 import Image from 'next/image'
 import NowPlaying from '../components/NowPlaying';
+import PlayButton from '../components/svg/PlayButton';
+import PauseButton from '../components/svg/PauseButton';
 function Player() {
     const [isPlayin, setIsPlaying] = useState(false)
     const [audio, setAudio] = useState(null)
@@ -37,7 +39,7 @@ function Player() {
     }
 
     return (
-        <div className="bg-clip-padding   rounded-md backdrop-filter backdrop-blur-xl bg-opacity-40  shadow-xl m-3 p-4 py-6">
+        <div className="bg-clip-padding w-full m-8 lg:w-1/4 lg:mx-auto rounded-md backdrop-filter backdrop-blur-xl bg-opacity-40  shadow-xl  p-4 py-6">
             <div className='py-2 px-3'>
                 <Text weight={400}>
                     <NowPlaying />
@@ -64,13 +66,19 @@ function Player() {
             </div>
             <section className='flex justify-center items-center p-4'>
                 <div>
-                    {!isPlayin ? <button className=''>
-                        <Image src='/circled-play.png' alt='play' width={80} height={80} onClick={start} />
-                    </button>
-                        :
-                        <button className=''>
-                            <Image src='/circled-pause.png' alt='pause' width={80} height={80} onClick={pause} />
+                    {!isPlayin ?
+
+                        <button className="" onClick={start}>
+
+                            <PlayButton />
                         </button>
+                        // {/* <Image src='/circled-play.png' alt='play' width={80} height={80} onClick={start} /> */}
+
+                        :
+                        <button className='' onClick={pause} >
+                            <PauseButton />
+                        </button>
+                        // <Image src='/circled-pause.png' alt='pause' width={80} height={80} onClick={pause} />
                     }
                 </div>
             </section>
