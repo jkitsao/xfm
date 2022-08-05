@@ -4,7 +4,7 @@ import axios from 'axios'
 function NowPlaying() {
     const [nowPlaying, setNowPlaying] = useState('')
     useEffect(() => {
-        axios.get('http://xfmservice-env.eba-5fvttb22.us-east-1.elasticbeanstalk.com/playing').then(resp => {
+        axios.get('https://xfmke.herokuapp.com/playing').then(resp => {
             // console.log(resp.data);
             setNowPlaying(resp.data.playing)
         });
@@ -12,12 +12,12 @@ function NowPlaying() {
     useInterval(() => {
         // Your custom logic here
         // setCount(count + 1);
-        axios.get('http://xfmservice-env.eba-5fvttb22.us-east-1.elasticbeanstalk.com/playing').then(resp => {
+        axios.get('https://xfmke.herokuapp.com/playing').then(resp => {
 
             // console.log(resp.data);
             setNowPlaying(resp.data.playing)
         });
-    }, 20000);
+    }, 100000);
     return (
         <div className=' text-white text-center rounded-md p-2  flex items-center justify-center '>
             {/* <span className="flex h-3 w-3 mr-2">

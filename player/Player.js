@@ -13,7 +13,7 @@ function Player() {
     //     "http://localhost:3000/listen"
     // );
     useEffect(() => {
-        setAudio(new Audio("http://xfmservice-env.eba-5fvttb22.us-east-1.elasticbeanstalk.com/listen"))
+        setAudio(new Audio("https://xfmke.herokuapp.com/listen"))
         // only run once on the first render on the client
     }, [])
 
