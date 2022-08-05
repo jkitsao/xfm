@@ -17,7 +17,7 @@ function NowPlaying() {
             // console.log(resp.data);
             setNowPlaying(resp.data.playing)
         });
-    }, 100000);
+    }, 15000);
     return (
         <div className=' text-white text-center rounded-md p-2  flex items-center justify-center '>
             {/* <span className="flex h-3 w-3 mr-2">
