@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Card, Text, Badge, Button, Group } from '@mantine/core'
-import { Bars } from 'react-loader-spinner'
+import { Audio as AudioSvg } from 'react-loader-spinner'
 import { Slider } from '@mantine/core';
+import { Howl, Howler } from 'howler';
 import Image from 'next/image'
 import NowPlaying from '../components/NowPlaying';
 import PlayButton from '../components/svg/PlayButton';
 import PauseButton from '../components/svg/PauseButton';
-function Player() {
+function HowlerPlayer() {
     const [isPlayin, setIsPlaying] = useState(false)
     const [audio, setAudio] = useState(null)
     const [volume, setVolume] = useState(0.5);
@@ -15,7 +16,13 @@ function Player() {
     //     "http://localhost:3000/listen"
     // );
     useEffect(() => {
-        setAudio(new Audio("https://xfmke.herokuapp.com/listen"))
+        // setAudio(new Audio("https://xfmke.herokuapp.com/listen"))
+        setAudio(new Howl({
+            src: ['https://xfmke.herokuapp.com/listen'],
+            format: ['mp3', 'aac'],
+            volume: volume,
+            html5: true
+        }))
         // only run once on the first render on the client
     }, [])
 
@@ -53,10 +60,10 @@ function Player() {
                 />
                     :
                     <div className='py-5 flex'>
-                        <Bars height="50" width="100"
+                        <AudioSvg height="50" width="100"
                             radius="9"
-                            color='purple'
-                            className=''
+                            // color='blue'
+                            className='text-blue-400'
                             ariaLabel='three-dots-loading'
                         // wrapperStyle
                         // wrapperClass
@@ -100,4 +107,4 @@ function Player() {
     )
 }
 
-export default Player
+export default HowlerPlayer
