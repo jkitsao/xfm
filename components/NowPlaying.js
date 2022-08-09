@@ -1,4 +1,5 @@
 import React, { useState, useEffect, } from 'react'
+import Head from 'next/head';
 import useInterval from '../hooks/useInterval'
 import axios from 'axios'
 function NowPlaying() {
@@ -16,11 +17,17 @@ function NowPlaying() {
         });
     }, 15000);
     return (
-        <div className=' text-white text-center rounded-md p-2  flex items-center justify-center '>
-            <span className=' animate-bounce font-mono'>
-                {nowPlaying}
-            </span>
-        </div >
+        <>
+            <Head>
+                <title>{nowPlaying && nowPlaying}</title>
+                <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+            </Head>
+            <div className=' text-white text-center rounded-md p-2  flex items-center justify-center '>
+                <span className=' animate-bounce font-mono'>
+                    {nowPlaying}
+                </span>
+            </div >
+        </>
     )
 }
 
