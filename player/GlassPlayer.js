@@ -1,24 +1,76 @@
-import React from 'react'
+import React, { useState, useEffect, } from 'react'
+import Image from 'next/image'
+import useInterval from '../hooks/useInterval'
+import { Bars } from 'react-loader-spinner'
+import axios from 'axios'
+import autoprefixer from 'autoprefixer'
+function GlassPlayer({ isPlayin, updateVolume }) {
+    const [nowPlaying, setNowPlaying] = useState('')
+    const [randomPick, setRandomPick] = useState(0)
+    const imageURL = `/gallery/gallery${randomPick}.webp`
 
-function GlassPlayer() {
+    useEffect(() => {
+        axios.get('https://xfmke.herokuapp.com/playing').then(resp => {
+            // console.log(resp.data);
+            setNowPlaying(resp.data.playing)
+        });
+    }, [])
+    useInterval(() => {
+        axios.get('https://xfmke.herokuapp.com/playing').then(resp => {
+            // console.log(resp.data);
+            setNowPlaying(resp.data.playing)
+            // setRandomPick(Math.floor(Math.random() * 7))
+        });
+    }, 15000);
+
+    useInterval(() => {
+        setRandomPick(Math.floor(Math.random() * 6))
+    }, 120000);
+    // store bg images in an array then randomly pick from the list after 
+    // a given amount of time
     return (
-        <div className="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded p-3 text-white border border-gray-300 shadow-lg">
-            {/* header */}
-            <div className="w-full mb-3 pb-3 border-b border-1 border-white">
-                <h3 className="text-xl font-semibold text-shadow">Something Good</h3>
-            </div>
-            {/* body */}
-            <div>
-                <img src="https://i.postimg.cc/SxLx0fHV/bg01.jpg" alt="image1" className="w-full h-48 object-cover mb-2" />
-                <p className="mb-3 tracking-wide text-base text-shadow">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
-                </p>
-                <button className="backdrop bg-white bg-opacity-0 border border-white px-3 py-1.5 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-40 hover:bg-opacity-10 text-lg">
-                    Detail
-                </button>
+        <div className=" w-full mlg:w-3/4 lg:mx-auto relative  glass_player"
+            style={{
+                backgroundImage: `url(${imageURL})`
+            }}
+        >
+            <div className='flex justify-center items-center h-full  absolute top-0 w-full'>
+                <h3 className='relative text-2xl font-semibold lg:text-4xl  p-5  bg-black/90 m-3 text-center rounded-md'>
+                    <span className='absolute inline-block top-0 left-0 text-xs text-red-500 p-1  m-1'>
+                        Playing:
+                    </span>
+                    <span className='m-2 inline-block font-bold text-red-700 font-elite'>
+                        {nowPlaying && nowPlaying}
+                    </span>
+                    {isPlayin ? <div className='flex justify-center animate-bounce my-2'>
+                        <Bars height="50" width="100"
+                            radius="9"
+                            color='purple'
+                            className=''
+                            ariaLabel='three-dots-loading'
+                        />
+                    </div>
+                        :
+                        < div className='flex justify-center py-3'>
+                            <Image src='/assets/rockforever.webp' alt='' className='mx-1' width={150} height={150} />
+                        </div>
+
+                    }
+                    <div className='w-full flex justify-center items-center'>
+                        {/* <Slider label={(value) => `${value}`} onChange={() => console.log({ audio })} /> */}
+                        <Image src='/speaker2.svg' alt='' className='mx-1' width={20} height={20} />
+                        <input
+                            type="range"
+                            defaultValue="50"
+                            min={0}
+                            max={100}
+                            onChange={(e) => updateVolume(e)}
+                            className=" h-2 bg-red-200 rounded-lg text-red-800 mx-3 cursor-pointer"
+                        />
+                    </div>
+                </h3>
             </div>
         </div>
-
     )
 }
 

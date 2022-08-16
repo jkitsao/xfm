@@ -2,6 +2,7 @@ import React, { useState, useEffect, } from 'react'
 import Head from 'next/head';
 import useInterval from '../hooks/useInterval'
 import axios from 'axios'
+import Helmet from './helmet';
 function NowPlaying() {
     const [nowPlaying, setNowPlaying] = useState('')
     useEffect(() => {
@@ -18,10 +19,7 @@ function NowPlaying() {
     }, 15000);
     return (
         <>
-            <Head>
-                <title>{nowPlaying && nowPlaying}</title>
-                <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-            </Head>
+            <Helmet title={nowPlaying && nowPlaying} />
             <div className=' text-white text-center rounded-md p-2  flex items-center justify-center '>
                 <span className=' animate-bounce font-mono'>
                     {nowPlaying}

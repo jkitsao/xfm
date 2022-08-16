@@ -39,7 +39,7 @@ function Player() {
     }
 
     return (
-        <div className="bg-clip-padding w-full m-8 lg:w-1/4 lg:mx-auto rounded-md backdrop-filter backdrop-blur-xl bg-opacity-40  shadow-xl  p-4 py-6">
+        <div className="bg-clip-padding w-full m-8 lg:w-1/4 lg:mx-auto rounded-md backdrop-filter backdrop-blur-xl bg-opacity-50   p-4 py-6">
             <div className='py-2 px-3'>
                 <Text weight={400}>
                     <NowPlaying />
@@ -69,7 +69,6 @@ function Player() {
                     {!isPlayin ?
 
                         <button className="" onClick={start}>
-
                             <PlayButton />
                         </button>
                         // {/* <Image src='/circled-play.png' alt='play' width={80} height={80} onClick={start} /> */}
