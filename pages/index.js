@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navigation';
+import Navbar from '../components/navigation';
+
 import Playbar from '../components/playbar';
 // import Navigation from '../components/navigation';
 import Layout from '../layouts/Layout';
@@ -40,6 +41,7 @@ export default function Home() {
     <Layout>
       <div className='h-full min-h-screen w-full bg-index '>
         <div className='absolute top-0 left-0 w-full min-h-screen  bg-black'>
+          {/* <Navbar /> */}
           <Navbar />
           <div className='flex justify-center items-center '>
             <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} />

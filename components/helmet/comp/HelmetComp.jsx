@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head';
-function Helmet({ title }) {
+function HelmetComp({ title }) {
     return (
         <Head>
             {/* Primary Meta Tags */}
@@ -25,4 +25,4 @@ function Helmet({ title }) {
     )
 }
 
-export default Helmet
+export default HelmetComp

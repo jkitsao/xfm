@@ -1,3 +1,3 @@
-import Helmet from "./comp/Helmet";
+import HelmetComp from "./comp/HelmetComp";
 
-export default Helmet
+export default HelmetComp
