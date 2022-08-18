@@ -7,7 +7,7 @@ function Navbar() {
             <section className='w-full flex justify-center text-center py-1'>
                 <div>
                     <h2 className='p-2 text-3xl lg:text-6xl font-bold  font-bree text-red-700 flex justify-center items-center'>
-                        <Image src='/assets/rockforever.webp' width={50} height={50} classNamemx-2 alt='' />
+                        {/* <Image src='/assets/rockforever.webp' width={50} height={50} classNamemx-2 alt='' /> */}
                         <span className='mx-3 underline-offset-1'>
                             Xfm online
                         </span>
