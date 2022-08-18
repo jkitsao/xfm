@@ -17,15 +17,12 @@
     /* position: relative; */
 }
 
-
-
-
 .glass_player {
     min-height: 45rem;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(71, 0, 0, 0.925);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-blend-mode: darken;
 
 }

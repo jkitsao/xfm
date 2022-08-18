@@ -3,25 +3,29 @@ import Image from 'next/image'
 import useInterval from '../hooks/useInterval'
 import { Bars } from 'react-loader-spinner'
 import axios from 'axios'
-import autoprefixer from 'autoprefixer'
+import { motion } from 'framer-motion'
 import HelmetComp from '../components/helmet'
 // import Helmet from '../components/helmet/comp/HelmetComp'
 
 function GlassPlayer({ isPlayin, updateVolume }) {
     const [nowPlaying, setNowPlaying] = useState('')
     const [randomPick, setRandomPick] = useState(0)
+    const [showVolume, setShowVolume] = useState()
+    const [listeners, setListeners] = useState(null)
     const imageURL = `/gallery/gallery${randomPick}.webp`
 
     useEffect(() => {
         axios.get('https://xfmke.herokuapp.com/playing').then(resp => {
             // console.log(resp.data);
             setNowPlaying(resp.data.playing)
+            setListeners(resp.data.listeners)
         });
     }, [])
     useInterval(() => {
         axios.get('https://xfmke.herokuapp.com/playing').then(resp => {
             // console.log(resp.data);
             setNowPlaying(resp.data.playing)
+            setListeners(resp.data.listeners)
             // setRandomPick(Math.floor(Math.random() * 7))
         });
     }, 15000);
@@ -34,7 +38,6 @@ function GlassPlayer({ isPlayin, updateVolume }) {
     return (
         <>
             <HelmetComp title={nowPlaying} />
-
             <div className=" w-full mlg:w-3/4 lg:mx-auto relative  glass_player"
                 style={{
                     backgroundImage: `url(${imageURL})`
@@ -45,13 +48,13 @@ function GlassPlayer({ isPlayin, updateVolume }) {
                         <span className='absolute inline-block top-0 left-0 text-xs text-red-500 p-1  m-1'>
                             Playing:
                         </span>
-                        <span className='m-2 inline-block font-bold text-red-700 font-elite'>
+                        <span className='m-2 inline-block font-bold text-red-600 font-elite'>
                             {nowPlaying && nowPlaying}
                         </span>
                         {isPlayin ? <div className='flex justify-center animate-bounce my-2'>
-                            <Bars height="50" width="100"
+                            <Bars height="50" width="120"
                                 radius="9"
-                                color='purple'
+                                color='red'
                                 className=''
                                 ariaLabel='three-dots-loading'
                             />
@@ -64,17 +67,24 @@ function GlassPlayer({ isPlayin, updateVolume }) {
                         }
                         <div className='w-full flex justify-center items-center'>
                             {/* <Slider label={(value) => `${value}`} onChange={() => console.log({ audio })} /> */}
-                            <Image src='/speaker2.svg' alt='' className='mx-1' width={20} height={20} />
-                            <input
-                                type="range"
-                                defaultValue="50"
-                                min={0}
-                                max={100}
-                                onChange={(e) => updateVolume(e)}
-                                className=" h-2 bg-red-200 rounded-lg text-red-800 mx-3 cursor-pointer"
+                            <Image src='/red-volume.png' alt='' className='mx-1 cursor-pointer opacity-80 hover:opacity-100' width={20} height={20}
+                                onClick={() => setShowVolume(!showVolume)}
                             />
+                            {showVolume && (
+
+                                <input
+                                    type="range"
+                                    defaultValue="50"
+                                    min={0}
+                                    max={100}
+                                    onChange={(e) => updateVolume(e)}
+                                    className=" h-2 bg-red-200 rounded-lg text-red-800 mx-3 cursor-pointer"
+                                />
+
+                            )}
                         </div>
                     </h3>
+
                 </div>
             </div>
         </>
