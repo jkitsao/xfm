@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
 
 .font-bree {
     font-family: 'Bree Serif', serif;
@@ -8,6 +8,10 @@
 
 .font-elite {
     font-family: 'Special Elite', cursive;
+}
+
+.font-tapestry {
+    font-family: 'Tapestry', cursive;
 }
 
 .bg-index {
@@ -33,6 +37,7 @@
         min-height: 75vh;
 
         background: rgba(26, 15, 83, 0.7);
+        background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

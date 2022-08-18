@@ -44,7 +44,15 @@ function GlassPlayer({ isPlayin, updateVolume }) {
                 }}
             >
                 <div className='flex justify-center items-center h-full  absolute top-0 w-full'>
-                    <h3 className='relative text-2xl font-semibold lg:text-4xl  p-5  bg-black/90 m-3 text-center rounded-md'>
+                    <motion.h3 className='relative text-2xl font-semibold lg:text-4xl  p-5  bg-black/90 m-3 text-center cursor-move rounded-md'
+                        drag
+                        dragConstraints={{
+                            top: -20,
+                            left: -20,
+                            right: 20,
+                            bottom: 20,
+                        }}
+                    >
                         <span className='absolute inline-block top-0 left-0 text-xs text-red-500 p-1  m-1'>
                             Playing:
                         </span>
@@ -83,7 +91,7 @@ function GlassPlayer({ isPlayin, updateVolume }) {
 
                             )}
                         </div>
-                    </h3>
+                    </motion.h3>
 
                 </div>
             </div>
