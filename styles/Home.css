@@ -22,7 +22,7 @@
 }
 
 .glass_player {
-    min-height: 45rem;
+    height: 30vh;
     background: rgba(71, 0, 0, 0.925);
     background-position: center;
     background-repeat: no-repeat;
@@ -34,9 +34,9 @@
 @media screen and (max-width: 992px) {
 
     .glass_player {
-        min-height: 75vh;
+        height: 100vh;
         background: rgba(94, 3, 3, 0.925);
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

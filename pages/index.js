@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/navigation';
-
+import useInterval from '../hooks/useInterval';
 import Playbar from '../components/playbar';
 // import Navigation from '../components/navigation';
 import Layout from '../layouts/Layout';
@@ -12,11 +12,19 @@ export default function Home() {
   const [isPlayin, setIsPlaying] = useState(false)
   const [audio, setAudio] = useState(null)
   const [volume, setVolume] = useState(0.5);
+  const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6))
+  const imageURL = `/gallery/gallery${randomPick}.webp`
+
+
 
   useEffect(() => {
     setAudio(new Audio("https://xfmke.herokuapp.com/listen"))
     // only run once on the first render on the client
   }, [])
+
+  useInterval(() => {
+    setRandomPick(Math.floor(Math.random() * 6))
+  }, 60000);
 
   const start = () => {
     audio.play();
@@ -39,16 +47,18 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className='h-full min-h-screen w-full bg-index '>
-        <div className='absolute top-0 left-0 w-full min-h-screen  bg-black'>
-          {/* <Navbar /> */}
-          <Navbar />
-          <div className='flex justify-center items-center '>
-            <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} />
-          </div>
-          <Playbar start={start} pause={pause} updateVolume={updateVolume} isPlayin={isPlayin} />
+      <div className='h-full min-h-screen w-full  glass_player overflow-y-hidden'
+        style={{
+          backgroundImage: `url(${imageURL})`
+        }}
+      >
+        <Navbar />
+        <div className='flex justify-center h-full items-start '>
+          <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} />
         </div>
+        <Playbar start={start} pause={pause} updateVolume={updateVolume} isPlayin={isPlayin} />
       </div>
+      {/* </div> */}
     </Layout>
   )
 }
