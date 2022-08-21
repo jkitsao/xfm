@@ -9,7 +9,7 @@ import HelmetComp from '../components/helmet'
 
 function GlassPlayer({ isPlayin, updateVolume }) {
     const [nowPlaying, setNowPlaying] = useState('')
-    const [randomPick, setRandomPick] = useState(0)
+    const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6))
     const [showVolume, setShowVolume] = useState()
     const [listeners, setListeners] = useState(null)
     const imageURL = `/gallery/gallery${randomPick}.webp`
@@ -44,14 +44,8 @@ function GlassPlayer({ isPlayin, updateVolume }) {
                 }}
             >
                 <div className='flex justify-center items-center h-full  absolute top-0 w-full'>
-                    <motion.h3 className='relative text-2xl font-semibold lg:text-4xl  p-5  bg-black/90 m-3 text-center cursor-move rounded-md'
-                        drag
-                        dragConstraints={{
-                            top: -20,
-                            left: -20,
-                            right: 20,
-                            bottom: 20,
-                        }}
+                    <motion.h3 className='relative text-2xl font-semibold lg:text-4xl  p-5  bg-black/90 m-3 text-center  rounded-md'
+
                     >
                         <span className='absolute inline-block top-0 left-0 text-xs text-red-500 p-1  m-1'>
                             Playing:

@@ -4,7 +4,7 @@ import PlayButton from '../../svg/PlayButton';
 import { motion } from 'framer-motion'
 function Playbar({ start, pause, isPlayin }) {
     return (
-        <section className='fixed bottom-0 p-4 py-5 border-t-8 border-dotted  border-red-900/30 w-full bg-black flex justify-center items-center select-none'>
+        <section className='fixed bottom-0 p-4 py-5   border-red-900/30 w-full bg-black flex justify-center items-center select-none'>
             <div>
                 {!isPlayin ?
 
