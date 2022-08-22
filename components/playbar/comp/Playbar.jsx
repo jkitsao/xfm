@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 function Playbar({ start, pause, isPlayin }) {
     return (
         <section className='fixed bottom-0 p-4 py-5  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 shadow-lg w-full flex justify-center items-center select-none'>
-            <div>
+            <div className='select-none'>
                 {!isPlayin ?
 
                     <motion.button className="select-none" onClick={start} title='play music'

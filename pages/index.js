@@ -27,12 +27,14 @@ export default function Home() {
   }, 60000);
 
   const start = () => {
+    // setAudio(new Audio("https://xfmke.herokuapp.com/listen"))
     audio.play();
     audio.volume = volume
     setIsPlaying(true)
     // console.log({ audio })
   };
   const pause = () => {
+
     audio.pause();
     setIsPlaying(false)
     // alert(audio.volume)

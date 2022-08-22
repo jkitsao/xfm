@@ -23,7 +23,7 @@
 
 .glass_player {
     height: 30vh;
-    background: rgba(71, 0, 0, 0.925);
+    background: rgba(36, 0, 0, 0.925);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,7 +35,7 @@
 
     .glass_player {
         height: 100vh;
-        background: rgba(94, 3, 3, 0.925);
+        background: rgba(36, 0, 0, 0.945);
         /* background-attachment: fixed; */
         background-position: center;
         background-repeat: no-repeat;
