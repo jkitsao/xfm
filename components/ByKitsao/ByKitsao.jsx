@@ -6,7 +6,7 @@ function ByKitsao() {
             <div className='text-xs lg:text-sm font-semibold font-mono'>
                 <span className='text-red-600'>
                     Creator/Music Director
-                    <a href="https://kitsao.me" className="mx-1 underline">
+                    <a href="https://kitsao.me" target='_blank' rel='noreferrer' className="mx-1 underline">
                         kitsao
                     </a>
                 </span>
