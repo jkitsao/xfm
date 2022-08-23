@@ -10,7 +10,7 @@ import HowlerPlayer from '../player/HowlerPlayer';
 export default function Home() {
 
   const [isPlayin, setIsPlaying] = useState(false)
-  const [audio, setAudio] = useState(null)
+  const [audio, setAudio] = useState({})
   const [volume, setVolume] = useState(0.5);
   const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6))
   const imageURL = `/gallery/gallery${randomPick}.webp`

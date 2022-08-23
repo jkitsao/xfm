@@ -42,7 +42,7 @@ function GlassPlayer({ isPlayin, updateVolume }) {
     return (
         <>
             <HelmetComp title={nowPlaying} />
-            <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center mt-32 lg:mt-52 h-full">
+            <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center mt-48 lg:mt-52 h-full">
                 <div className=''>
                     <motion.h3 className='relative text-2xl  bg-center font-semibold lg:text-4xl bg-no-repeat p-5 py-8  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 bg-black/70 bg-blend-darken m-3 text-center  rounded-md'
                         style={{
