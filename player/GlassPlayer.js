@@ -8,7 +8,7 @@ import HelmetComp from '../components/helmet'
 import ByKitsao from '../components/ByKitsao/ByKitsao'
 // import Helmet from '../components/helmet/comp/HelmetComp'
 
-function GlassPlayer({ isPlayin, updateVolume }) {
+function GlassPlayer({ isPlayin, updateVolume, volume }) {
     const [nowPlaying, setNowPlaying] = useState('')
     const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6))
     const [showVolume, setShowVolume] = useState()
@@ -18,20 +18,20 @@ function GlassPlayer({ isPlayin, updateVolume }) {
 
 
     useEffect(() => {
-        axios.get('https://xfmke.herokuapp.com/playing').then(resp => {
+        axios.get('https://xfmonline.xyz/playing').then(resp => {
             // console.log(resp.data);
             setNowPlaying(resp.data.playing)
             setListeners(resp.data.listeners)
         });
     }, [])
     useInterval(() => {
-        axios.get('https://xfmke.herokuapp.com/playing').then(resp => {
+        axios.get('https://xfmonline.xyz/playing').then(resp => {
             // console.log(resp.data);
             setNowPlaying(resp.data.playing)
             setListeners(resp.data.listeners)
             // setRandomPick(Math.floor(Math.random() * 7))
         });
-    }, 15000);
+    }, 5000);
 
     useInterval(() => {
         setRandomPick(Math.floor(Math.random() * 6))
@@ -42,17 +42,17 @@ function GlassPlayer({ isPlayin, updateVolume }) {
     return (
         <>
             <HelmetComp title={nowPlaying} />
-            <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center mt-48 lg:mt-52 h-full">
+            <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center mt-32 lg:mt-52 h-full">
                 <div className=''>
-                    <motion.h3 className='relative text-2xl  bg-center font-semibold lg:text-4xl bg-no-repeat p-5 py-8  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 bg-black/70 bg-blend-darken m-3 text-center  rounded-md'
+                    <motion.h3 className='relative text-2xl  bg-center font-semibold lg:text-4xl bg-no-repeat p-5 py-8  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 bg-black/80 bg-blend-darken m-3 text-center  rounded-md'
                         style={{
                             backgroundImage: `url(${imageURL})`
                         }}
                     >
                         <span className='absolute inline-block top-0 left-0 text-xs text-red-500 p-1  m-1'>
-                            Playing:
+                            listeners: {listeners}
                         </span>
-                        <span className='m-2 inline-block font-bold text-red-600 font-elite'>
+                        <span className='m-2 inline-block font-bold text-red-600 font-elite max-w-screen-sm'>
                             {nowPlaying && nowPlaying}
                         </span>
                         {isPlayin ? <div className='flex justify-center  my-2'>
@@ -84,6 +84,7 @@ function GlassPlayer({ isPlayin, updateVolume }) {
                                 <input
                                     type="range"
                                     defaultValue="50"
+                                    value={volume}
                                     min={0}
                                     max={100}
                                     onChange={(e) => updateVolume(e)}

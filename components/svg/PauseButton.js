@@ -3,7 +3,7 @@ import React from 'react'
 function PauseButton() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512' }} xmlSpace="preserve"
-            className='w-16 h-16'
+            className='w-16 h-16 select-none'
         >
             <path style={{ fill: '#5B699C' }} d="M256,0C114.84,0,0,114.842,0,256s114.84,256,256,256c141.158,0,256-114.842,256-256S397.158,0,256,0z  " />
             <path style={{ fill: '#2D4175' }} d="M256,0v512c141.158,0,256-114.842,256-256S397.158,0,256,0z" />

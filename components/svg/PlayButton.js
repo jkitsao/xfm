@@ -3,7 +3,7 @@ import React from 'react'
 function PlayButton() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512' }} xmlSpace="preserve"
-            className='w-16 h-16 cursor-pointer '
+            className='w-16 h-16 cursor-pointer select-none'
         >
             <circle style={{ fill: '#366796' }} cx={256} cy={256} r={256} />
             <path style={{ fill: '#273B7A' }} d="M166.041,375.282l133.082,133.082c86.643-14.7,158.465-72.923,192.183-151.4L378.649,244.307  L166.041,375.282z" />

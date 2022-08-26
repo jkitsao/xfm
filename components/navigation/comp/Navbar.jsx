@@ -8,8 +8,8 @@ function Navbar() {
                 <div>
                     <h2 className='p-2 text-4xl lg:text-6xl font-bold  font-bree text-red-700 flex justify-center items-center'>
                         {/* <Image src='/assets/rockforever.webp' width={50} height={50} classNamemx-2 alt='' /> */}
-                        <span className='mx-3 underline-offset-1 font-tapestry '>
-                            Trust The Wizard
+                        <span className='mx-3 underline-offset-1 font-tapestry'>
+                            Memento Mori
                         </span>
                     </h2>
                     {/* <p className='font-mono font-semibold font-elite'>Home of Great music</p> */}

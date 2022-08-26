@@ -7,19 +7,22 @@ import Layout from '../layouts/Layout';
 import GlassPlayer from '../player/GlassPlayer';
 import HowlerPlayer from '../player/HowlerPlayer';
 // import Player from '../player/Player';
+import { useWindowSize } from 'usehooks-ts'
 export default function Home() {
 
   const [isPlayin, setIsPlaying] = useState(false)
+  const { width, height } = useWindowSize()
   const [audio, setAudio] = useState({})
   const [volume, setVolume] = useState(0.5);
   const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6))
-  const imageURL = `/gallery/gallery${randomPick}.webp`
-
-
+  const desktopUrl = `/gallery/gallery${randomPick}.webp`
+  const mobileUrl = `/mobile/rockstar.webp`
+  const imageURL = width > 600 ? desktopUrl : mobileUrl
 
   useEffect(() => {
-    setAudio(new Audio("https://xfmke.herokuapp.com/listen"))
+    setAudio(new Audio("https://xfmonline.xyz/listen"))
     // only run once on the first render on the client
+    // alert(width)
   }, [])
 
   useInterval(() => {
@@ -56,7 +59,7 @@ export default function Home() {
       >
         <Navbar />
         <div className='flex justify-center h-full items-start '>
-          <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} />
+          <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} volume={volume * 100} />
         </div>
         <Playbar start={start} pause={pause} updateVolume={updateVolume} isPlayin={isPlayin} />
       </div>

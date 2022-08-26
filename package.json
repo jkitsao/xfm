@@ -25,7 +25,8 @@
     "react-audio-player": "^0.17.0",
     "react-dom": "18.2.0",
     "react-loader-spinner": "^5.1.7-beta.1",
-    "tailwindcss": "^3.1.7"
+    "tailwindcss": "^3.1.7",
+    "usehooks-ts": "^2.6.0"
   },
   "devDependencies": {
     "eslint": "8.21.0",
