@@ -6,6 +6,7 @@ import axios from 'axios'
 import { motion } from 'framer-motion'
 import HelmetComp from '../components/helmet'
 import ByKitsao from '../components/ByKitsao/ByKitsao'
+import ShareComp from '../components/share'
 // import Helmet from '../components/helmet/comp/HelmetComp'
 
 function GlassPlayer({ isPlayin, updateVolume, volume }) {
@@ -95,6 +96,9 @@ function GlassPlayer({ isPlayin, updateVolume, volume }) {
                         </div>
                         <div>
                             <ByKitsao />
+                        </div>
+                        <div>
+                            <ShareComp song={nowPlaying} />
                         </div>
                     </motion.h3>
 
