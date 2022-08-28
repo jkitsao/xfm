@@ -13,7 +13,7 @@ export default function Home() {
   const [isPlayin, setIsPlaying] = useState(false)
   const { width, height } = useWindowSize()
   const [audio, setAudio] = useState({})
-  const [volume, setVolume] = useState(0.7);
+  const [volume, setVolume] = useState(1);
   const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6))
   const desktopUrl = `/gallery/gallery${randomPick}.webp`
   const mobileUrl = `/mobile/rockstar.webp`

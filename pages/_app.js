@@ -5,6 +5,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 import Helmet from '../components/helmet';
+import { GoogleAnalytics } from "nextjs-google-analytics";
 export default function App(props) {
   const { Component, pageProps } = props;
 
@@ -19,6 +20,7 @@ export default function App(props) {
           colorScheme: 'dark',
         }}
       >
+        <GoogleAnalytics trackPageViews />
         <Component {...pageProps} />
       </MantineProvider>
     </>
