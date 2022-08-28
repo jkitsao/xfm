@@ -32,7 +32,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume }) {
             setListeners(resp.data.listeners)
             // setRandomPick(Math.floor(Math.random() * 7))
         });
-    }, 5000);
+    }, 15000);
 
     useInterval(() => {
         setRandomPick(Math.floor(Math.random() * 6))
@@ -94,11 +94,19 @@ function GlassPlayer({ isPlayin, updateVolume, volume }) {
 
                             )}
                         </div>
+
+                        <div>
+                            <ShareComp song={nowPlaying} />
+                        </div>
                         <div>
                             <ByKitsao />
                         </div>
-                        <div>
-                            <ShareComp song={nowPlaying} />
+                        <div className='w-full py-3 flex justify-center'>
+                            <div className='text-xs lg:text-xs font-semibold font-mono w-3/4 mx-auto'>
+                                <span className='text-red-600'>
+                                    *if audio disconnects (Network issue) please reload the page*
+                                </span>
+                            </div>
                         </div>
                     </motion.h3>
 
