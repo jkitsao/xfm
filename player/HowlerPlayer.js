@@ -12,9 +12,6 @@ function HowlerPlayer() {
     const [audio, setAudio] = useState(null)
     const [volume, setVolume] = useState(0.5);
     const [endValue, setEndValue] = useState(50);
-    // const audio = new Audio(
-    //     "http://localhost:3000/listen"
-    // );
     useEffect(() => {
         // setAudio(new Audio("https://xfmke.herokuapp.com/listen"))
         setAudio(new Howl({
@@ -30,7 +27,6 @@ function HowlerPlayer() {
         audio.play();
         audio.volume = volume
         setIsPlaying(true)
-        // console.log({ audio })
     };
     const pause = () => {
         audio.pause();
