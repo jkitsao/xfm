@@ -12,6 +12,7 @@ export default function Home() {
 
   const [isPlayin, setIsPlaying] = useState(false)
   const { width, height } = useWindowSize()
+  const [isReady, setIsReady] = useState(false)
   const [audio, setAudio] = useState({})
   const [volume, setVolume] = useState(1);
   const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6))
@@ -20,24 +21,25 @@ export default function Home() {
   const imageURL = width > 600 ? desktopUrl : mobileUrl
 
   useEffect(() => {
-    // setAudio(new Audio("https://xfmonline.xyz/listen"))
-    //use Howler instead
-    setAudio(new Howl({
-      src: ['https://xfmonline.xyz/listen'],
-      format: ['mp3'],
-      volume: volume,
-      html5: true
-    }))
-    // audio.play()
-
+    setAudio(new Audio("https://xfmonline.xyz/listen"))
+    // audio.preload = "auto";
   }, [])
+  let status = audio.readyState
+  useEffect(() => {
+    if (status >= 1) setIsReady(true)
+    if (status < 1) setIsReady(false)
+  }, [status])
 
   useInterval(() => {
     setRandomPick(Math.floor(Math.random() * 6))
   }, 60000);
+  useInterval(() => {
+    if (status >= 2) setIsReady(true)
+  }, 2000);
 
   const start = () => {
     audio.play();
+    // alert(audio.readyState)
     setIsPlaying(true)
   };
   const pause = () => {
@@ -60,7 +62,7 @@ export default function Home() {
       >
         <Navbar />
         <div className='flex justify-center h-full items-start '>
-          <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} volume={volume * 100} />
+          <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} volume={volume * 100} isReady={isReady} />
         </div>
         <Playbar start={start} pause={pause} updateVolume={updateVolume} isPlayin={isPlayin} />
       </div>
