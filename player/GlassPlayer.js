@@ -46,7 +46,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             <HelmetComp title={nowPlaying} />
             <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center mt-32 lg:mt-52 h-full">
                 <div className=''>
-                    <motion.h3 className='relative text-2xl  bg-center font-semibold lg:text-4xl bg-no-repeat p-5 py-8  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 bg-black/80 bg-blend-darken m-3 text-center  rounded-md'
+                    <motion.h3 className='relative text-xl  bg-center font-semibold lg:text-4xl bg-no-repeat p-5 py-8  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 bg-black/80 bg-blend-darken m-3 text-center  rounded-md'
                         style={{
                             backgroundImage: `url(${imageURL})`
                         }}
@@ -55,7 +55,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                             listeners: {listeners}
                         </span>
                         <span className='m-2 inline-block font-bold text-red-600 font-elite max-w-screen-sm p-2 bg-black/70'>
-                            {nowPlaying && nowPlaying}
+                            {'>'} {nowPlaying && nowPlaying}
                         </span>
                         {isPlayin ? <div className='flex justify-center  my-2'>
 
