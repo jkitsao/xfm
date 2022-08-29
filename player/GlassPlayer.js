@@ -110,19 +110,20 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                         <div>
                             <ShareComp song={nowPlaying} />
                         </div>
-                        <div>
-                            <ByKitsao />
-                        </div>
+
                         <div className='w-full py-3 flex justify-center'>
                             <div className='text-xs  font-semibold font-mono w-3/4 mx-auto'>
                                 <span className='text-red-600 inline-block my-1'>
-                                    If your audio keeps disconnecting (Caused by Network issue), please reload the page.
+                                    If your audio stops playing (Caused by Network issue), please reload the page.
                                 </span>
                                 {/* <hr /> */}
-                                <div className='py-5 flex justify-center'>
+                                <div className='py-1 flex justify-center'>
                                     <PlayWith />
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            <ByKitsao />
                         </div>
                     </motion.h3>
 
