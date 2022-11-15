@@ -22,8 +22,8 @@
 }
 
 .glass_player {
-    height: 30vh;
-    background: rgba(36, 0, 0, 0.925);
+    /* height: 30vh; */
+    background: rgba(36, 0, 0, 0.986);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

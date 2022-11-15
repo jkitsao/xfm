@@ -44,85 +44,23 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
     return (
         <>
             <HelmetComp title={nowPlaying} />
-            <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center mt-32 lg:mt-52 h-full">
-                <div className=''>
-                    <motion.h3 className='relative text-xl  bg-center font-semibold lg:text-4xl bg-no-repeat p-5 py-8  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 bg-black/80 bg-blend-darken m-3 text-center  rounded-md'
+            <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center mt-24  ">
+                <div className='h-full'>
+                    <motion.h3 className='relative text-xl  bg-center font-semibold lg:text-4xl bg-no-repeat   bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-50 bg-black/80 bg-blend-darken m-3 text-center  rounded-md'
                         style={{
-                            backgroundImage: `url(${imageURL})`
+                            backgroundImage: `url(${imageURL})`,
+                            backgroundSize:'cover'
                         }}
                     >
-                        <span className='absolute inline-block top-0 left-0 text-xs text-red-500 p-1 px-2 bg-black m-1'>
-                            listeners: {listeners}
-                        </span>
-                        <span className='m-2 inline-block font-bold text-red-600 font-elite max-w-screen-sm p-2 bg-black/70'>
-                            {'>'} {nowPlaying && nowPlaying}
-                        </span>
-                        {isPlayin ? <div className='flex justify-center  my-2'>
-
-                            {isReady ? <Bars height="50" width="120"
-                                radius="9"
-                                color='red'
-                                className=''
-                                ariaLabel='three-dots-loading'
-                            />
-                                :
-                                <RotatingLines
-                                    strokeColor="red"
-                                    strokeWidth="2"
-                                    animationDuration="0.75"
-                                    width="56"
-                                    visible={true}
-                                />
-                            }
-
-                        </div>
-                            :
-                            < div className='flex justify-center py-3'>
-                                {/* <Image src='/assets/rockforever.webp' alt='' className='mx-1' width={150} height={150} /> */}
-                                <span className='font-bold font-tapestry  text-red-700'>
-                                    Paused
-                                </span>
-                            </div>
-
-                        }
-
-
-                        <div className='w-full flex justify-center items-center py-2'>
-                            {/* <Slider label={(value) => `${value}`} onChange={() => console.log({ audio })} /> */}
-                            <Image src='/red-volume.png' alt='' className='mx-1 cursor-pointer opacity-80 hover:opacity-100' width={20} height={20}
-                                onClick={() => setShowVolume(!showVolume)}
-                            />
-                            {showVolume && (
-
-                                <input
-                                    type="range"
-                                    defaultValue="50"
-                                    value={volume}
-                                    min={0}
-                                    max={100}
-                                    onChange={(e) => updateVolume(e)}
-                                    className=" h-2 bg-red-200 rounded-lg text-red-800 mx-3 cursor-pointer"
-                                />
-
-                            )}
+                       
+                        <div className='p-5'>
+                        <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/embed?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 150, border: 0}} />
+                        <section className='my-5'>
+                        <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/history?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 300, border: 0}} />
+                        </section>
                         </div>
 
-                        <div>
-                            <ShareComp song={nowPlaying} />
-                        </div>
-
-                        <div className='w-full py-3 flex justify-center'>
-                            <div className='text-xs  font-semibold font-mono w-3/4 mx-auto'>
-                                <span className='text-red-600 inline-block my-1'>
-                                    If your audio stops playing (Caused by Network issue), please reload the page.
-                                </span>
-                                {/* <hr /> */}
-                                <div className='py-1 flex justify-center'>
-                                    <PlayWith />
-                                </div>
-                            </div>
-                        </div>
-                        <div>
+                         <div className='py-4'>
                             <ByKitsao />
                         </div>
                     </motion.h3>

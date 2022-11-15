@@ -21,7 +21,7 @@ export default function Home() {
   const imageURL = width > 600 ? desktopUrl : mobileUrl
 
   useEffect(() => {
-    setAudio(new Audio("https://xfmonline.xyz/listen"))
+    setAudio(new Audio("http://102.37.221.126:8000/radio.mp3"))
     // audio.preload = "auto";
   }, [])
   let status = audio.readyState
@@ -60,11 +60,10 @@ export default function Home() {
           backgroundImage: `url(${imageURL})`
         }}
       >
-        <Navbar />
-        <div className='flex justify-center h-full items-start '>
+        {/* <Navbar /> */}
+        <div className='flex justify-center  items-center  '>
           <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} volume={volume * 100} isReady={isReady} />
-        </div>
-        <Playbar start={start} pause={pause} updateVolume={updateVolume} isPlayin={isPlayin} />
+        </div> 
       </div>
       {/* </div> */}
     </Layout>
