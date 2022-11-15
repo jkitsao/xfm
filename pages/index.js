@@ -60,7 +60,7 @@ export default function Home() {
           backgroundImage: `url(${imageURL})`
         }}
       >
-        {/* <Navbar /> */}
+        <Navbar />
         <div className='flex justify-center  items-center  '>
           <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} volume={volume * 100} isReady={isReady} />
         </div> 

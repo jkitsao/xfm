@@ -34,8 +34,8 @@
 @media screen and (max-width: 992px) {
 
     .glass_player {
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.74);
+        /* height: 100vh; */
+        background: rgba(0, 0, 0, 0.911);
         /* background-attachment: fixed; */
         background-position: center;
         background-repeat: no-repeat;
