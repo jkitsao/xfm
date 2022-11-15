@@ -29,7 +29,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                         }}
                     >
                         <div className='p-6'>
-                        <section className='bg-gray-900/80 shadow-lg shadow-blue-900/40 p-3 rounded-md'>
+                        <section className='bg-gray-900/80 shadow-lg shadow-red-900/70 p-3 rounded-md'>
                         <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/embed?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 150, border: 0}} />
                         </section>
                         <section className='my-3 p-3'>
