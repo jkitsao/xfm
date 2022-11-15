@@ -36,7 +36,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                         <div className='text-sm py-3 text-gray-400 '>
                                 <span>Playlist History</span>
                             </div>
-                        <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/history?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 250, border: 0}} />
+                        <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/history?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 220, border: 0}} />
                         </section>
                         </div>
                     </motion.h3>
