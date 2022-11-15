@@ -52,7 +52,6 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                             backgroundSize:'cover'
                         }}
                     >
-                       
                         <div className='p-5'>
                         <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/embed?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 150, border: 0}} />
                         <section className='my-5'>
