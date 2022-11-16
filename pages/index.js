@@ -8,6 +8,9 @@ import GlassPlayer from '../player/GlassPlayer';
 import HowlerPlayer from '../player/HowlerPlayer';
 // import Player from '../player/Player';
 import { useWindowSize } from 'usehooks-ts'
+import dynamic from 'next/dynamic'
+import ChatModal from '../components/chat/ChatModal';
+const AblyChatComponent = dynamic(() => import('../components/chat/AblyChatComponent'), { ssr: false });
 export default function Home() {
 
   const [isPlayin, setIsPlaying] = useState(false)
@@ -20,15 +23,15 @@ export default function Home() {
   const mobileUrl = `/mobile/rockstar.webp`
   const imageURL = width > 600 ? desktopUrl : mobileUrl
 
-  useEffect(() => {
-    setAudio(new Audio("http://102.37.221.126:8000/radio.mp3"))
-    // audio.preload = "auto";
-  }, [])
-  let status = audio.readyState
-  useEffect(() => {
-    if (status >= 1) setIsReady(true)
-    if (status < 1) setIsReady(false)
-  }, [status])
+  // useEffect(() => {
+  //   setAudio(new Audio("http://102.37.221.126:8000/radio.mp3"))
+  //   // audio.preload = "auto";
+  // }, [])
+  // let status = audio.readyState
+  // useEffect(() => {
+  //   if (status >= 1) setIsReady(true)
+  //   if (status < 1) setIsReady(false)
+  // }, [status])
 
   useInterval(() => {
     setRandomPick(Math.floor(Math.random() * 6))
@@ -37,21 +40,21 @@ export default function Home() {
     if (status >= 2) setIsReady(true)
   }, 2000);
 
-  const start = () => {
-    audio.play();
-    // alert(audio.readyState)
-    setIsPlaying(true)
-  };
-  const pause = () => {
-    audio.pause();
-    setIsPlaying(false)
-  };
+  // const start = () => {
+  //   audio.play();
+  //   // alert(audio.readyState)
+  //   setIsPlaying(true)
+  // };
+  // const pause = () => {
+  //   audio.pause();
+  //   setIsPlaying(false)
+  // };
 
-  const updateVolume = (e) => {
-    let myvolume = e.target.value / 100
-    setVolume(myvolume)
-    Howler.volume(volume);
-  }
+  // const updateVolume = (e) => {
+  //   let myvolume = e.target.value / 100
+  //   setVolume(myvolume)
+  //   Howler.volume(volume);
+  // }
 
   return (
     <Layout>
@@ -62,10 +65,11 @@ export default function Home() {
       >
         <Navbar />
         <div className='flex justify-center  items-center  '>
-          <GlassPlayer isPlayin={isPlayin} updateVolume={updateVolume} volume={volume * 100} isReady={isReady} />
+          <GlassPlayer  />
         </div> 
+      {/* |<ChatModal/> */}
       </div>
-      {/* </div> */}
+      {/* <AblyChatComponent /> */}
     </Layout>
   )
 }

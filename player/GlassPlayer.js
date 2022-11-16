@@ -8,6 +8,7 @@ import HelmetComp from '../components/helmet'
 import ByKitsao from '../components/ByKitsao/ByKitsao'
 import ShareComp from '../components/share'
 import PlayWith from '../components/playwith/PlayWith'
+import ChatModal from '../components/chat/ChatModal'
 // import Helmet from '../components/helmet/comp/HelmetComp'
 
 function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
@@ -40,6 +41,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                         </section>
                         </div>
                     </motion.h3>
+                    <ChatModal/>
                     <div className='py-2'>
                             <ByKitsao />
                         </div>
