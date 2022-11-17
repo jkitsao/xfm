@@ -13,9 +13,8 @@ import ChatModal from '../components/chat/ChatModal'
 
 function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
     const [nowPlaying, setNowPlaying] = useState('')
-    // const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6))
-    // const [showVolume, setShowVolume] = useState()
-    // const [listeners, setListeners] = useState(null)
+  const [receivedMessages, setMessages] = useState([]);
+   
     let randomPickGif = 'edgy'
     const imageURL = `/gifs/${randomPickGif}.gif`
     return (
@@ -41,7 +40,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                         </section>
                         </div>
                     </motion.h3>
-                    <ChatModal/>
+                    <ChatModal receivedMessages={receivedMessages} setMessages={setMessages}/>
                     <div className='py-2'>
                             <ByKitsao />
                         </div>
