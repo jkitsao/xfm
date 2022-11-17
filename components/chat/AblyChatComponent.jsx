@@ -35,9 +35,16 @@ const AblyChatComponent = ({setMessages,receivedMessages}) => {
 
   const messages = receivedMessages.map((message, index) => {
     const author = message.connectionId === ably.connection.id ? "me" : "other";
-    return <span key={index} className={`${author=='me'?'bg-green-200 ':'bg-blue-200'} px-6 text-sm py-1 text-black rounded-t-lg rounded-r-lg`} data-author={author}
-    
-    >{message.data}</span>;
+    return (
+<div key={index} className='my-2'>
+    <span  className={`${author=='me'?'bg-green-200 ':'bg-blue-200'} px-6 text-sm py-1 text-black rounded-t-lg rounded-r-lg`} data-author={author}
+    >{message.data}
+    </span>
+     <span className='block my-1 text-xs text-gray-500'>
+     {author=='me'?'me':'Anonymous'}
+   </span>
+</div>
+    )
   });
 
   useEffect(() => {
