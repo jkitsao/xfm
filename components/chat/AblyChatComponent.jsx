@@ -9,6 +9,7 @@ const AblyChatComponent = ({setMessages,receivedMessages,channel,ably}) => {
 
   const [messageText, setMessageText] = useState("");
   const messageTextIsEmpty = messageText.trim().length === 0;
+  const [author,setAuthor]=useState('')
   // const [channel, ably] = useChannel("chat-demo", (message) => {
   //   const history = receivedMessages.slice(-199);
   //   setMessages([...history, message]);
@@ -36,16 +37,17 @@ const AblyChatComponent = ({setMessages,receivedMessages,channel,ably}) => {
   const messages = receivedMessages.map((message, index) => {
     const author = message.connectionId === ably.connection.id ? "me" : "other";
     return (
-<div key={index} className='my-2'>
-    <span  className={`${author=='me'?'bg-green-200 ':'bg-blue-200'} px-6 text-sm py-1 text-black rounded-t-lg rounded-r-lg`} data-author={author}
+<div key={index} className={`${author=='me'?'ml-auto mr-0':'mr-auto ml-0'} `}>
+    <span  className={`${author=='me'?'bg-green-200/90 rounded-t-lg rounded-l-lg':'bg-blue-200/90 rounded-t-lg rounded-r-lg'} px-6 text-sm py-1 text-black block `} data-author={author}
     >{message.data}
     </span>
-     <span className='block my-1 text-xs text-gray-500'>
+     <span className={`${author=='me'?'text-right':'text-left'}  block my-1 text-xs text-gray-500 `}>
      {author=='me'?'me':'Anonymous'}
    </span>
 </div>
     )
   });
+ 
 
   useEffect(() => {
     messageEnd.scrollIntoView({ behaviour: "smooth" });
