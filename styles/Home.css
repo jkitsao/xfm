@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap'); */
 
 .font-bree {
     font-family: 'Bree Serif', serif;
@@ -23,7 +23,7 @@
 
 .glass_player {
     /* height: 30vh; */
-    background: rgba(36, 0, 0, 0.986);
+    background: rgb(29, 0, 0);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,7 +35,7 @@
 
     .glass_player {
         /* height: 100vh; */
-        background: rgba(0, 0, 0, 0.911);
+        background: rgb(0, 0, 0);
         /* background-attachment: fixed; */
         background-position: center;
         background-repeat: no-repeat;

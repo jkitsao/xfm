@@ -10,7 +10,7 @@ import HowlerPlayer from '../player/HowlerPlayer';
 import { useWindowSize } from 'usehooks-ts'
 import dynamic from 'next/dynamic'
 import ChatModal from '../components/chat/ChatModal';
-const AblyChatComponent = dynamic(() => import('../components/chat/AblyChatComponent'), { ssr: false });
+// const AblyChatComponent = dynamic(() => import('../components/chat/AblyChatComponent'), { ssr: false });
 export default function Home() {
 
   const [isPlayin, setIsPlaying] = useState(false)

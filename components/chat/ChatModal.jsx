@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Modal, Button, Group } from '@mantine/core';
 import AblyChatComponent from './AblyChatComponent';
 
-export default function ChatModal({setMessages,receivedMessages}) {
+export default function ChatModal({setMessages,receivedMessages,channel,ably}) {
   const [opened, setOpened] = useState(false);
 
   return (
@@ -13,7 +13,7 @@ export default function ChatModal({setMessages,receivedMessages}) {
         title="Chat with Listeners online"
       >
         {/* Modal content */}
-        <AblyChatComponent receivedMessages={receivedMessages} setMessages={setMessages} />
+        <AblyChatComponent receivedMessages={receivedMessages} setMessages={setMessages} channel={channel} ably={ably}/>
       </Modal>
 
     
