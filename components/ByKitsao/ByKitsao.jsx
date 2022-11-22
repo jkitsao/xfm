@@ -2,7 +2,7 @@ import React from 'react'
 import { Highlight } from '@mantine/core';
 function ByKitsao() {
     return (
-        <div className='w-full py-1 flex justify-center'>
+        <div className='w-full py-1 flex justify-center sticky bottom-0  mb-5'>
             <div className='text-xs lg:text-sm font-bold font-mono'>
                 <span className='text-purple-100 '>
                     crafted by

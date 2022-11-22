@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function Navbar() {
     return (
-        <nav className='sticky top-0 z-50  py-3 '>
+        <nav className='sticky top-0 z-50  lg:py-5 '>
             <section className='w-full flex justify-center text-center py-1'>
                 <div>
                     <h2 className='p-2 text-2xl lg:text-4xl font-bold   text-purple-100 '>

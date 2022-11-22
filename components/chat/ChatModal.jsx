@@ -19,7 +19,7 @@ export default function ChatModal({setMessages,receivedMessages,channel,ably}) {
     
         {/* <Button onClick={() => setOpened(true)}></Button> */}
         <section className='w-full py-3  flex justify-center items-center'>
-        <button onClick={() => setOpened(true)} className='border-2 text-white border-blue-400 py-2 px-10 rounded-md text-sm '>
+        <button onClick={() => setOpened(true)} className='border text-white border-blue-400 py-3 px-10 rounded-3xl text-sm '>
         Chat with other listeners
         </button>
         </section>
