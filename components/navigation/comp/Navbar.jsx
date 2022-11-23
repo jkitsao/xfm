@@ -8,7 +8,7 @@ function Navbar() {
                 <div>
                     <h2 className='p-2 text-2xl lg:text-4xl font-bold   text-gray-400 sticky top-0 z-50 '>
                         {/* <Image src='/assets/rockstar.jpg' width={70} height={80}  alt='' /> */}
-                        <span className='mx-3 block underline-offset-1 border text-red-800 border-red-800 border-dashed p-5 rounded-sm'>
+                        <span className='mx-3 block underline-offset-1 border text-red-700 border-red-500 bg-red-600/10 border-dashed p-3 rounded-md'>
                           Rock + Alternative Music.
                         </span>
                     </h2>

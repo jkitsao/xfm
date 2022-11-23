@@ -21,7 +21,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
   });
 
    
-    let randomPickGif = 'moon'
+    let randomPickGif = 'storm'
     const imageURL = `/gifs/${randomPickGif}.gif`
     return (
         <>
