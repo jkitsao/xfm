@@ -21,14 +21,14 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
   });
 
    
-    let randomPickGif = 'storm'
+    let randomPickGif = 'moon'
     const imageURL = `/gifs/${randomPickGif}.gif`
     return (
         <>
             <HelmetComp title={nowPlaying} />
             <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center lg:mt-10  ">
                 <div className='h-full'>
-                    <motion.h3 className='relative text-xl pb-3  bg-center font-semibold lg:text-4xl bg-no-repeat  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-90 bg-gray-900 bg-blend-darken m-3 text-center  rounded-md'
+                    <motion.h3 className='relative text-xl pb-3  bg-center font-semibold lg:text-4xl bg-no-repeat  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-90 bg-red-800 bg-blend-darken m-3 text-center  rounded-md'
                         style={{
                             backgroundImage: `url(${imageURL})`,
                             backgroundSize:'cover'
@@ -38,9 +38,9 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                         <section className='bg-gray-900/80 shadow-xl shadow-gray-6+00/70 p-3 rounded-md'>
                         <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/embed?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 150, border: 0}} />
                         </section>
-                        <section className='my-3 p-3'>
+                        <section className='my-3 p-3 bg-gray-900/80'>
                         <div className='text-sm py-3 text-gray-400 '>
-                                <span>Playlist History</span>
+                                <span>AutoDJ History</span>
                             </div>
                         <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/history?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 220, border: 0}} />
                         </section>
