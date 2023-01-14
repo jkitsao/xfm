@@ -1,7 +1,7 @@
 {
     "theme_color": "#9a0907",
     "background_color": "#3e0904",
-    "display": "standalone",
+    "display": "fullscreen",
     "scope": "/",
     "start_url": "/",
     "name": "xfmradio",

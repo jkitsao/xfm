@@ -15,13 +15,13 @@ import { useChannel } from "../components/chat/AblyReactEffect";
 function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
     const [nowPlaying, setNowPlaying] = useState('')
   const [receivedMessages, setMessages] = useState([]);
-  const [channel, ably] = useChannel("chat-demo", (message) => {
-    const history = receivedMessages.slice(-199);
-    setMessages([...history, message]);
-  });
+//   const [channel, ably] = useChannel("chat-demo", (message) => {
+//     const history = receivedMessages.slice(-199);
+//     setMessages([...history, message]);
+//   });
 
    
-    let randomPickGif = 'storm'
+    let randomPickGif = 'gliding'
     const imageURL = `/gifs/${randomPickGif}.gif`
     return (
         <>
@@ -35,17 +35,17 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                         }}
                     >
                         <div className='p-6'>
-                        <section className='bg-gray-900/80 shadow-xl shadow-gray-6+00/70 p-3 rounded-md'>
+                        <section className='bg-gray-900/90 shadow-xl shadow-gray-6+00/70 p-3 rounded-md'>
                         <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/embed?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 150, border: 0}} />
                         </section>
-                        <section className='my-3 p-3 pb-5 bg-gray-900/80'>
-                        <div className='text-sm py-3 text-gray-400 '>
+                        <section className='my-3 p-3 pb-5 bg-gray-900/60 shadow-xl  rounded-lg'>
+                        <div className='text-sm py-3 text-gray-300 '>
                                 <span>AutoDJ History</span>
                             </div>
                         <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/history?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 220, border: 0}} />
                         </section>
                         </div>
-                    <ChatModal receivedMessages={receivedMessages} setMessages={setMessages} channel={channel} ably={ably}/>
+                    {/* <ChatModal receivedMessages={receivedMessages} setMessages={setMessages} channel={channel} ably={ably}/> */}
                     </motion.h3>
                     <div className='py-2'>
                             <ByKitsao />
