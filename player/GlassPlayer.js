@@ -11,6 +11,7 @@ import PlayWith from '../components/playwith/PlayWith'
 import ChatModal from '../components/chat/ChatModal'
 // import Helmet from '../components/helmet/comp/HelmetComp'
 import { useChannel } from "../components/chat/AblyReactEffect";
+import RequestModal from '../components/request/RequestModal'
 
 function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
     const [nowPlaying, setNowPlaying] = useState('')
@@ -21,20 +22,20 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
 //   });
 
    
-    let randomPickGif = 'gliding'
+    let randomPickGif = 'waves'
     const imageURL = `/gifs/${randomPickGif}.gif`
     return (
         <>
             <HelmetComp title={nowPlaying} />
             <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center lg:mt-10  ">
                 <div className='h-full'>
-                    <motion.h3 className='relative text-xl pb-3  bg-center font-semibold lg:text-4xl bg-no-repeat  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-90 bg-red-800 bg-blend-darken m-3 text-center  rounded-md'
+                    <motion.h3 className='relative text-xl pb-3  bg-center font-semibold lg:text-4xl bg-no-repeat  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-95 bg-red-900 bg-blend-darken m-3 text-center  rounded-md'
                         style={{
                             backgroundImage: `url(${imageURL})`,
                             backgroundSize:'cover'
                         }}
                     >
-                        <div className='p-6'>
+                        <div className='px-4 py-2'>
                         <section className='bg-gray-900/90 shadow-xl shadow-gray-6+00/70 p-3 rounded-md'>
                         <iframe src="https://radio.xfmradio.co.ke/public/xfmonline/embed?theme=dark" frameBorder={0}  style={{width: '100%', minHeight: 150, border: 0}} />
                         </section>
@@ -46,8 +47,10 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                         </section>
                         </div>
                     {/* <ChatModal receivedMessages={receivedMessages} setMessages={setMessages} channel={channel} ably={ably}/> */}
+                    <RequestModal/>
                     </motion.h3>
-                    <div className='py-2'>
+                    
+                    <div className='py-2 border-t border-gray-900'>
                             <ByKitsao />
                         </div>
                 </div>
