@@ -50,12 +50,12 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                 <iframe
                   src="https://dashboard.xfmradio.co.ke/public/xfm-online/history?theme=dark"
                   frameBorder={0}
-                  style={{ width: "100%", minHeight: 220, border: 0 }}
+                  style={{ width: "100%", minHeight: 250, border: 0 }}
                 />
               </section>
             </div>
             {/* <ChatModal receivedMessages={receivedMessages} setMessages={setMessages} channel={channel} ably={ably}/> */}
-            <RequestModal />
+            {/* <RequestModal /> */}
           </motion.h3>
 
           <div className="py-2 border-t border-gray-900">
