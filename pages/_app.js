@@ -1,10 +1,11 @@
-import '../styles/globals.css'
-import '../styles/Home.css'
+import "../styles/globals.css";
+import "../styles/Home.css";
 
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import { MantineProvider } from '@mantine/core';
-import Helmet from '../components/helmet';
+import { AppProps } from "next/app";
+import Head from "next/head";
+import Script from "next/script";
+import { MantineProvider } from "@mantine/core";
+import Helmet from "../components/helmet";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 export default function App(props) {
   const { Component, pageProps } = props;
@@ -17,14 +18,13 @@ export default function App(props) {
         withNormalizeCSS
         theme={{
           /** Put your mantine theme override here */
-          colorScheme: 'dark',
+          colorScheme: "dark",
         }}
       >
         <GoogleAnalytics trackPageViews />
         <Component {...pageProps} />
       </MantineProvider>
+      <Script src="https://forum.xfmradio.co.ke/js/commento.js" />
     </>
   );
 }
-
-

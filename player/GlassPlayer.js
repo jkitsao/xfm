@@ -56,6 +56,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             </div>
             {/* <ChatModal receivedMessages={receivedMessages} setMessages={setMessages} channel={channel} ably={ably}/> */}
             {/* <RequestModal /> */}
+            <div id="commento"></div>
           </motion.h3>
 
           <div className="py-2 border-t border-gray-900">
