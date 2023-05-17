@@ -70,7 +70,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             <div
               id="commento"
               style={{
-                maxWidth: "700px",
+                maxWidth: "500px",
               }}
             ></div>
           </div>
