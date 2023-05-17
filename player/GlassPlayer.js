@@ -67,7 +67,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             </span>
           </div>
           <div
-            className="p-5 bg-slate-900 rounded-md border-gray-800 text-gray-200 "
+            className="p-5 bg-slate-900 rounded-md border-gray-800 text-gray-200 h-96"
             style={{
               maxWidth: "100%",
             }}
