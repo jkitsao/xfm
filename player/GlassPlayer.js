@@ -26,14 +26,14 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
   return (
     <>
       <HelmetComp title={nowPlaying} />
-      <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center lg:mt-10  ">
+      <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center lg:mt-8  ">
         <div className="h-full">
           <motion.h3
-            className="relative text-xl pb-3  bg-center font-semibold lg:text-4xl bg-no-repeat  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-95 bg-red-900 bg-blend-darken m-3 text-center  rounded-md"
-            style={{
-              backgroundImage: `url(${imageURL})`,
-              backgroundSize: "cover",
-            }}
+            className="relative text-xl pb-3  bg-center font-semibold lg:text-4xl bg-no-repeat  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-95  bg-blend-darken m-3 text-center  rounded-md"
+            // style={{
+            //   backgroundImage: `url(${imageURL})`,
+            //   backgroundSize: "cover",
+            // }}
           >
             <div className="px-4 py-2">
               <section className="bg-gray-900/90 shadow-xl shadow-gray-6+00/70 p-3 rounded-md">
@@ -61,7 +61,10 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
           <div className="py-2 border-t border-b border-gray-900">
             <ByKitsao />
           </div>
-          <div className="p-5 bg-red-900 text-gray-200">
+          <div className="p-3">
+            <span className="font-semibold  text-red-500">View Comments</span>
+          </div>
+          <div className="p-5 bg-black/80 border-4 rounded-md border-gray-800 text-gray-200 h-96">
             <div id="commento"></div>
           </div>
         </div>
