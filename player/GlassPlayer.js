@@ -58,7 +58,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             {/* <RequestModal /> */}
           </motion.h3>
 
-          <div className="py-2 border-t border-b border-gray-900">
+          <div className="py-2 border-b border-gray-900">
             <ByKitsao />
           </div>
           <div className="p-3">
