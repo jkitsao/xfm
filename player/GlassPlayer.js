@@ -64,7 +64,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
           <div className="p-3">
             <span className="font-semibold  text-red-500">View Comments</span>
           </div>
-          <div className="p-5 bg-black/80 border-4 rounded-md border-gray-800 text-gray-200 ">
+          <div className="p-5 bg-slate-900 rounded-md border-gray-800 text-gray-200 h-96">
             <div id="commento"></div>
           </div>
         </div>
