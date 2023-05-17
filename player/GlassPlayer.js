@@ -62,7 +62,9 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             <ByKitsao />
           </div>
           <div className="p-3">
-            <span className="font-semibold  text-red-500">View Comments</span>
+            <span className="font-semibold ml-3 bg-red-600/10 p-2 text-red-500">
+              View Comments
+            </span>
           </div>
           <div className="p-5 bg-slate-900 rounded-md border-gray-800 text-gray-200 ">
             <div id="commento"></div>
