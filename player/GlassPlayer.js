@@ -61,7 +61,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
           <div className="py-2 border-t border-b border-gray-900">
             <ByKitsao />
           </div>
-          <div className="p-5 bg-red-800 text-gray-200">
+          <div className="p-5 bg-red-900 text-gray-200">
             <div id="commento"></div>
           </div>
         </div>
