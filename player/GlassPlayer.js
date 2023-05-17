@@ -66,7 +66,12 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
               View Comments
             </span>
           </div>
-          <div className="p-5 bg-slate-900 rounded-md border-gray-800 text-gray-200 ">
+          <div
+            className="p-5 bg-slate-900 rounded-md border-gray-800 text-gray-200 "
+            style={{
+              maxWidth: "100%",
+            }}
+          >
             <div id="commento"></div>
           </div>
         </div>
