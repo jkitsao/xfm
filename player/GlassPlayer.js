@@ -26,7 +26,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
   return (
     <>
       <HelmetComp title={nowPlaying} />
-      <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex justify-center lg:mt-8  ">
+      <div className=" w-full lg:w-3/4 lg:mx-auto relative  flex flex-grow-0 justify-center lg:mt-8  ">
         <div className="h-full">
           <motion.h3
             className="relative text-xl pb-3  bg-center font-semibold lg:text-4xl bg-no-repeat  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-95  bg-blend-darken m-3 text-center  rounded-md"
@@ -66,13 +66,13 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
               View Comments
             </span>
           </div>
-          <div
-            className="p-5 bg-slate-900 rounded-md border-gray-800 text-gray-200 h-96"
-            style={{
-              maxWidth: "100%",
-            }}
-          >
-            <div id="commento"></div>
+          <div className="p-5 bg-slate-900 rounded-md border-gray-800 text-gray-200 ">
+            <div
+              id="commento"
+              style={{
+                maxWidth: "700px",
+              }}
+            ></div>
           </div>
         </div>
       </div>
