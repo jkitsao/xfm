@@ -5,8 +5,23 @@ import { nowPlaying } from '../../../utils/api/myapi';
 function HelmetComp({data}) {
     // Rock out with the best online rock station!
     // const {data}=useQuery({ queryKey: ['nowPlaying'], nowPlaying })
+    // const [data, setData] = useState([]);
+    // useEffect(() => {
+    //   // alert(data)
+    //   (async function () {
+    //     // await setData(nowPlaying)
+    //     try {
+    //       let data = await nowPlaying();
+    //       setData(data.data.now_playing);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
+    //     //data.artist,data.title,data.art
+    //     // alert(JSON.stringify(data.data.now_playing));
+    //   })();
+    // }, []);
     const title='Listen to Great Rock and Alternative hits online'
-   const dynamic_og_image=`https://xfmradio.co.ke/api/og?title=${data?.title}&artist=${data?.artist}&art=${data?.art}`
+   const dynamic_og_image= `https://xfmradio.co.ke/api/og?title=${data?.text}&artist=${data?.artist}&art=${data?.art}`
     return (
         <Head>
             {/* Primary Meta Tags */}
@@ -14,6 +29,7 @@ function HelmetComp({data}) {
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             <meta name='title' content={title && title} />
             <meta name="description" content="Rock out with the best Online Rock and Alternative music station!" />
+            <meta property="og:image" content={dynamic_og_image}/>
             {/* Open Graph / Facebook */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://xfmradio.co.ke/" />

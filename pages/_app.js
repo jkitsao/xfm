@@ -5,32 +5,18 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import { MantineProvider } from "@mantine/core";
-import Helmet from "../components/helmet";
+// import Helmet from "../components/helmet";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import React, { useEffect, useState } from "react";
 import { nowPlaying } from "../utils/api/myapi";
 export default function App(props) {
   const { Component, pageProps } = props;
   // const queryClient = useQueryClient();
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    // alert(data)
-    (async function () {
-      // await setData(nowPlaying)
-      try {
-        let data = await nowPlaying();
-        setData(data.data.now_playing);
-      } catch (error) {
-        console.error(error);
-      }
-      //data.artist,data.title,data.art
-      // alert(JSON.stringify(data.data.now_playing));
-    })();
-  }, []);
+
   return (
     <>
       {/* <QueryClientProvider client={queryClient}> */}
-      <Helmet title="xfm online | Home of great music" data={data} />
+      {/* {data && <Helmet title="xfm online | Home of great music" data={data} />} */}
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS

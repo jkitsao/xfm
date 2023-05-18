@@ -11,12 +11,12 @@ export default async function handler(req) {
   const title = searchParams.get("title");
   const artist = searchParams.get("artist");
   const art = searchParams.get("art");
-  if (!artist || !title || !art) {
-    return new ImageResponse(<>{'provide required information"'}</>, {
-      width: 1200,
-      height: 630,
-    });
-  }
+  // if (!artist || !title || !art) {
+  //   return new ImageResponse(<>{'provide required information"'}</>, {
+  //     width: 1200,
+  //     height: 630,
+  //   });
+  // }
 
   return new ImageResponse(
     (

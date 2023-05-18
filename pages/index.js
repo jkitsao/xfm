@@ -10,8 +10,9 @@ import HowlerPlayer from "../player/HowlerPlayer";
 import { useWindowSize } from "usehooks-ts";
 import dynamic from "next/dynamic";
 import ChatModal from "../components/chat/ChatModal";
+import HelmetComp from "../components/helmet";
 // const AblyChatComponent = dynamic(() => import('../components/chat/AblyChatComponent'), { ssr: false });
-export default function Home() {
+export default function Home({ data }) {
   const [isPlayin, setIsPlaying] = useState(false);
   const { width, height } = useWindowSize();
   const [isReady, setIsReady] = useState(false);
@@ -22,16 +23,6 @@ export default function Home() {
   const mobileUrl = `/mobile/rockstar.webp`;
   const imageURL = width > 600 ? desktopUrl : mobileUrl;
 
-  // useEffect(() => {
-  //   setAudio(new Audio("http://102.37.221.126:8000/radio.mp3"))
-  //   // audio.preload = "auto";
-  // }, [])
-  // let status = audio.readyState
-  // useEffect(() => {
-  //   if (status >= 1) setIsReady(true)
-  //   if (status < 1) setIsReady(false)
-  // }, [status])
-
   useInterval(() => {
     setRandomPick(Math.floor(Math.random() * 6));
   }, 60000);
@@ -39,24 +30,9 @@ export default function Home() {
     if (status >= 2) setIsReady(true);
   }, 2000);
 
-  // const start = () => {
-  //   audio.play();
-  //   // alert(audio.readyState)
-  //   setIsPlaying(true)
-  // };
-  // const pause = () => {
-  //   audio.pause();
-  //   setIsPlaying(false)
-  // };
-
-  // const updateVolume = (e) => {
-  //   let myvolume = e.target.value / 100
-  //   setVolume(myvolume)
-  //   Howler.volume(volume);
-  // }
-
   return (
     <Layout>
+      <HelmetComp data={data} />
       <div
         className="h-full min-h-screen   glass_player overflow-y-hidden"
         style={{
@@ -72,4 +48,20 @@ export default function Home() {
       {/* <AblyChatComponent /> */}
     </Layout>
   );
+}
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  try {
+    const res = await fetch(
+      `https://dashboard.xfmradio.co.ke/api/nowplaying/xfm-online`
+    );
+    const data = await res.json();
+    // Pass data to the page via props
+    console.log({ nowplaying: data.now_playing.song });
+    return { props: { data: data.now_playing.song } };
+  } catch (error) {
+    console.error(error);
+  }
+  // console.log(data);
 }
