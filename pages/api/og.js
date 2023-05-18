@@ -9,7 +9,7 @@ export default async function handler(req) {
   const { searchParams } = req.nextUrl;
   // const username = searchParams.get("username");
   const title = searchParams.get("title");
-  const artist = searchParams.get("artist");
+  // const artist = searchParams.get("artist");
   const art = searchParams.get("art");
   // if (!artist || !title || !art) {
   //   return new ImageResponse(<>{'provide required information"'}</>, {
@@ -58,7 +58,7 @@ export default async function handler(req) {
             opacity: 0.9,
           }}
         >
-          Now playing {title}, by {artist}
+          {title}
         </div>
       </div>
     ),
