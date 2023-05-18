@@ -25,7 +25,7 @@ function HelmetComp({data}) {
     return (
         <Head>
             {/* Primary Meta Tags */}
-            <title>Now Playing {data?.text}</title>
+            <title>Now Playing | {data?.text}</title>
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             <meta name='title' content={title && title} />
             <meta name="description" content="Rock out with the best Online Rock and Alternative music station!" />
