@@ -1,8 +1,22 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Head from 'next/head';
+import { useQuery } from '@tanstack/react-query';
+import { nowPlaying } from '../../../utils/api/myapi';
 function HelmetComp() {
     // Rock out with the best online rock station!
+    // const {data}=useQuery({ queryKey: ['nowPlaying'], nowPlaying })
     const title='Listen to Great Rock and Alternative hits online'
+    const [data,setData]=useState([])
+    useEffect(()=>{
+        // alert(data)
+        (
+            async function(){
+                // await setData(nowPlaying)
+                let data= await nowPlaying()
+                alert(data)
+            }
+        )
+    },[])
     return (
         <Head>
             {/* Primary Meta Tags */}
