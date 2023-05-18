@@ -17,10 +17,14 @@ export default function App(props) {
     // alert(data)
     (async function () {
       // await setData(nowPlaying)
-      let data = await nowPlaying();
-      setData(data.data.now_playing);
+      try {
+        let data = await nowPlaying();
+        setData(data.data.now_playing);
+      } catch (error) {
+        console.error(error);
+      }
       //data.artist,data.title,data.art
-      alert(JSON.stringify(data.data.now_playing));
+      // alert(JSON.stringify(data.data.now_playing));
     })();
   }, []);
   return (
