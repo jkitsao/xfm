@@ -25,22 +25,22 @@ function HelmetComp({data}) {
     return (
         <Head>
             {/* Primary Meta Tags */}
-            <title>Now Playing | {data?.text}</title>
+            {/* <title>Now Playing | {data?.text}</title> */}
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             <meta name='title' content={title && title} />
-            <meta name="description" content="Rock out with the best Online Rock and Alternative music station!" />
+            <meta name="description" content={`Now Playing ${data?.text}`} />
             <meta property="og:image" content={data?.art}/>
             {/* Open Graph / Facebook */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://xfmradio.co.ke/" />
             <meta property="og:title" content={title && title} />
-            <meta property="og:description" content='Rock out with the best Online Rock and Alternative music station!' />
+            <meta property="og:description" content={`Now Playing ${data?.text}`} />
             <meta property="og:image" content={data?.art} />
             {/* Twitter */}
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content="https://xfmradio.co.ke/" />
             <meta property="twitter:title" content={title && title} />
-            <meta property="twitter:description" content="Rock out with the best Online Rock and Alternative music station!" />
+            <meta property="twitter:description" content={`Now Playing ${data?.text}`} />
             <meta property="twitter:image" content={data?.art} />
         </Head>
     )
