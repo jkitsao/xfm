@@ -21,6 +21,7 @@ function HelmetComp({data}) {
     //   })();
     // }, []);
     const title='Listen to Great Rock and Alternative hits online'
+    const desc='Rockin the Airwaves: Kenya\'s Ultimate Online Radio Station for Rock and Alternative Vibes!'
 //    const dynamic_og_image= `https://xfmradio.co.ke/api/og?title=${data?.text}&artist=${data?.artist}&art=${data?.art}`
     return (
         <Head>
@@ -28,19 +29,19 @@ function HelmetComp({data}) {
             {/* <title>Now Playing | {data?.text}</title> */}
             <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
             <meta name='title' content={title && title} />
-            <meta name="description" content={`Now Playing ${data?.text}`} />
+            <meta name="description" content={desc} />
             <meta property="og:image" content={data?.art}/>
             {/* Open Graph / Facebook */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://xfmradio.co.ke/" />
             <meta property="og:title" content={title && title} />
-            <meta property="og:description" content={`Now Playing ${data?.text}`} />
+            <meta property="og:description" content={desc} />
             <meta property="og:image" content={data?.art} />
             {/* Twitter */}
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content="https://xfmradio.co.ke/" />
             <meta property="twitter:title" content={title && title} />
-            <meta property="twitter:description" content={`Now Playing ${data?.text}`} />
+            <meta property="twitter:description" content={desc} />
             <meta property="twitter:image" content={data?.art} />
         </Head>
     )

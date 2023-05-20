@@ -24,7 +24,7 @@ export default async function handler(req) {
         style={{
           fontSize: 60,
           color: "black",
-          background: "#f6f6f6",
+          // background: "#f6f6f6",
           width: "100%",
           height: "100%",
           paddingTop: 50,
@@ -33,6 +33,10 @@ export default async function handler(req) {
           alignItems: "center",
           display: "flex",
           backgroundImage: `url(${art})`,
+          // backgroundRepeat: "no-repeat",
+          // backgroundSize: " cover",
+          // backgroundSize: " 100%",
+          backgroundPosition: "center",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -50,6 +54,7 @@ export default async function handler(req) {
             margin: "0 42px",
             fontSize: 40,
             width: "auto",
+
             maxWidth: 550,
             textAlign: "center",
             backgroundColor: "black",
