@@ -20,7 +20,7 @@ function HelmetComp({data}) {
     //     // alert(JSON.stringify(data.data.now_playing));
     //   })();
     // }, []);
-    const title='Plug In and Tune Out: Kenya\'s Alternative Rock Haven on the Digital Airwaves'
+    const title='Kenya\'s Alternative Rock Haven on the Digital Airwaves'
     const desc='Rockin the Airwaves: Kenya\'s Ultimate Online Radio Station for Rock and Alternative Vibes!'
 //    const dynamic_og_image= `https://xfmradio.co.ke/api/og?title=${data?.text}&artist=${data?.artist}&art=${data?.art}`
     return (
