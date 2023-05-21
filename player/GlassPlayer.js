@@ -61,7 +61,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
           <div className="py-2 border-b border-gray-900">
             <ByKitsao />
           </div>
-          <div className="p-3">
+          {/* <div className="p-3">
             <span className="font-semibold ml-3 bg-red-600/10 p-2 text-red-500">
               View Comments
             </span>
@@ -73,7 +73,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                 maxWidth: "500px",
               }}
             ></div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
