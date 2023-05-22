@@ -24,7 +24,7 @@ export default function Home({ data }) {
   const imageURL = width > 600 ? desktopUrl : mobileUrl;
 
   useInterval(() => {
-    setRandomPick(Math.floor(Math.random() * 6));
+    setRandomPick(data.art);
   }, 60000);
   useInterval(() => {
     if (status >= 2) setIsReady(true);
@@ -34,9 +34,9 @@ export default function Home({ data }) {
     <Layout>
       <HelmetComp data={data} />
       <div
-        className="h-full min-h-screen   glass_player overflow-y-hidden"
+        className="h-full min-h-screen   glass_player overflow-y-hidden overflow-x-hidden"
         style={{
-          backgroundImage: `url(${imageURL})`,
+          backgroundImage: `url(${data?.art || imageURL})`,
         }}
       >
         <Navbar />
