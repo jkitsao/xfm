@@ -38,7 +38,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             <div className="px-4 py-2">
               <section className="bg-gray-900/90 shadow-xl shadow-gray-6+00/70 p-3 rounded-md">
                 <iframe
-                  src="https://dashboard.xfmradio.co.ke/public/xfm-online/embed?theme=dark"
+                  src="https://studio.kitsao.me/public/xfm/embed?theme=dark"
                   frameBorder={0}
                   style={{ width: "100%", minHeight: 150, border: 0 }}
                 />
@@ -48,7 +48,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
                   <span>AutoDJ History</span>
                 </div>
                 <iframe
-                  src="https://dashboard.xfmradio.co.ke/public/xfm-online/history?theme=dark"
+                  src="https://studio.kitsao.me/public/xfm/history?theme=dark"
                   frameBorder={0}
                   style={{ width: "100%", minHeight: 250, border: 0 }}
                 />
