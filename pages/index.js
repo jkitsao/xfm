@@ -20,7 +20,7 @@ export default function Home({ data }) {
   const [volume, setVolume] = useState(1);
   const [randomPick, setRandomPick] = useState(Math.floor(Math.random() * 6));
   const desktopUrl = `/gallery/gallery${randomPick}.webp`;
-  const mobileUrl = `/mobile/rockstar.webp`;
+  const mobileUrl = `https://images.unsplash.com/photo-1629276299414-a6f6d6403fd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80`;
   const imageURL = width > 600 ? desktopUrl : mobileUrl;
 
   useInterval(() => {
@@ -34,9 +34,10 @@ export default function Home({ data }) {
     <Layout>
       <HelmetComp data={data} />
       <div
-        className="h-full min-h-screen   glass_player overflow-y-hidden overflow-x-hidden"
+        className="h-full min-h-screen  glass_player overflow-y-hidden overflow-x-hidden"
         style={{
-          backgroundImage: `url(${data?.art || imageURL})`,
+          // backgroundImage: `url(${data?.art || imageURL})`,
+          backgroundImage: `url(${imageURL})`,
         }}
       >
         <Navbar />
