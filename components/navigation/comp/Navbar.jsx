@@ -13,7 +13,7 @@ function Navbar() {
                 src="https://em-content.zobj.net/thumbs/160/emojidex/112/pushpin_1f4cc.png"
                 className="w-10 mx-1"
               />{" "}
-              Rock & Alternative Music.
+              Rock & Alternative Music 24/7.
             </span>
           </h2>
           {/* <p className='font-mono font-semibold font-elite'>Home of Great music</p> */}
