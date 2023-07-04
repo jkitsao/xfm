@@ -21,7 +21,7 @@ function HelmetComp({ data }) {
   //   })();
   // }, []);
   const title = "Rock and alternative music 24/7";
-  const desc = `Playing: ${data?.title || data?.text}`;
+  const desc = `Playing you the best  mix of alternative, indie, soft and Punk Rock`;
   //    const dynamic_og_image= `https://xfmradio.co.ke/api/og?title=${data?.text}&artist=${data?.artist}&art=${data?.art}`
   return (
     <Head>
