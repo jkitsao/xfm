@@ -21,7 +21,7 @@ function HelmetComp({ data }) {
   //   })();
   // }, []);
   const title = "Rock and alternative music 24/7";
-  const desc = "F* Radio Africa";
+  const desc = `Playing: ${data?.title || data?.text}`;
   //    const dynamic_og_image= `https://xfmradio.co.ke/api/og?title=${data?.text}&artist=${data?.artist}&art=${data?.art}`
   return (
     <Head>
