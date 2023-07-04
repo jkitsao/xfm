@@ -36,7 +36,7 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             // }}
           >
             <div className="px-4 py-2">
-              <section className="bg-gray-900/90 shadow-xl shadow-gray-6+00/70 p-3 rounded-md">
+              <section className="bg-gray-900/70 shadow-xl shadow-gray-600/70 p-3 rounded-md">
                 <iframe
                   src="https://studio.kitsao.me/public/xfm/embed?theme=dark"
                   frameBorder={0}
