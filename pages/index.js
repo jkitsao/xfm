@@ -38,7 +38,7 @@ export default function Home({ data }) {
         }}
       >
         <Navbar />
-        <div className="flex justify-center items-center pt-12 md:pt-2  overflow-x-hidden">
+        <div className="flex justify-center items-center pt-8 md:pt-2  overflow-x-hidden">
           <GlassPlayer />
         </div>
         {/* |<ChatModal/> */}
