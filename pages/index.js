@@ -11,6 +11,7 @@ import { useWindowSize } from "usehooks-ts";
 import dynamic from "next/dynamic";
 import ChatModal from "../components/chat/ChatModal";
 import HelmetComp from "../components/helmet";
+import PayPalDonate from "../components/Donate/PayPalDonate";
 // const AblyChatComponent = dynamic(() => import('../components/chat/AblyChatComponent'), { ssr: false });
 export default function Home({ data }) {
   const { width, height } = useWindowSize();
@@ -42,6 +43,7 @@ export default function Home({ data }) {
           <GlassPlayer />
         </div>
         {/* |<ChatModal/> */}
+        {/* <PayPalDonate /> */}
       </div>
       {/* <AblyChatComponent /> */}
     </Layout>
