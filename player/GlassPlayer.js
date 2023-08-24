@@ -58,9 +58,9 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
             {/* <ChatModal receivedMessages={receivedMessages} setMessages={setMessages} channel={channel} ably={ably}/> */}
             {/* <RequestModal /> */}
           </motion.h3>
-          <div className="w-full p-2 flex justify-center">
+          {/* <div className="w-full p-2 flex justify-center">
             <PayPalDonate />
-          </div>
+          </div> */}
           <div className="py-2 border-b border-gray-900">
             <ByKitsao />
           </div>
