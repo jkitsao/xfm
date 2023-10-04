@@ -33,10 +33,12 @@ export default function Home({ data }) {
       <HelmetComp data={data} />
       <div
         className="h-full min-h-screen glass_player overflow-y-hidden overflow-x-hidden"
-        style={{
-          backgroundImage: `url(${data?.art || imageURL})`,
-          // backgroundImage: `url(${imageURL})`,
-        }}
+        style={
+          {
+            // backgroundImage: `url(${data?.art || imageURL})`,
+            // backgroun-----dImage: `url(${imageURL})`,
+          }
+        }
       >
         <Navbar />
         <div className="flex justify-center items-center pt-8 md:pt-2  overflow-x-hidden">
