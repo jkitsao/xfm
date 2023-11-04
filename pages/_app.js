@@ -9,6 +9,7 @@ import { MantineProvider } from "@mantine/core";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import React, { useEffect, useState } from "react";
 import { nowPlaying } from "../utils/api/myapi";
+import { NotificationsProvider } from "@mantine/notifications";
 export default function App(props) {
   const { Component, pageProps } = props;
   // const queryClient = useQueryClient();
@@ -26,7 +27,9 @@ export default function App(props) {
         }}
       >
         <GoogleAnalytics trackPageViews />
-        <Component {...pageProps} />
+        <NotificationsProvider position="top-center">
+          <Component {...pageProps} />
+        </NotificationsProvider>
       </MantineProvider>
       {/* </QueryClientProvider> */}
       <Script src="https://forum.xfmradio.co.ke/js/commento.js" />
