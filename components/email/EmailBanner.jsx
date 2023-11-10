@@ -25,7 +25,7 @@ export default function EmailBanner() {
       return showNotification({
         title: " Cheers!. 🎉",
         message:
-          " You have successfully subscribed. Welcome to our community! 🚀 ",
+          " You have successfully subscribed. Welcome to our community!🚀 ",
         autoClose: 4000,
       });
     } catch (error) {
@@ -63,7 +63,7 @@ export default function EmailBanner() {
             required
             autoComplete="true"
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="hello@babu.co.ke"
+            placeholder="What's your email"
             sx={{ flex: 1 }}
           />
           <Button
