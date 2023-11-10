@@ -36,13 +36,13 @@ function HelmetComp({ data }) {
       <meta property="og:image" content={data?.art} />
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://xfmradio.co.ke/" />
+      <meta property="og:url" content="https://xfm.co.ke/" />
       <meta property="og:title" content={title && title} />
       <meta property="og:description" content={desc} />
       <meta property="og:image" content={data?.art} />
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://xfmradio.co.ke/" />
+      <meta property="twitter:url" content="https://xfm.co.ke/" />
       <meta property="twitter:title" content={title && title} />
       <meta property="twitter:description" content={desc} />
       <meta property="twitter:image" content={data?.art} />
