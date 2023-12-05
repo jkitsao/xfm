@@ -60,7 +60,7 @@ export default function Home({ data }) {
 export async function getServerSideProps() {
   // Fetch data from external API
   try {
-    const res = await fetch(`https://xfm.birdbox.studio/api/nowplaying/xfm`);
+    const res = await fetch(`https://studio.xfm.co.ke/api/nowplaying/xfm`);
     const data = await res.json();
     // Pass data to the page via props
     console.log({ nowplaying: data.now_playing.song });
