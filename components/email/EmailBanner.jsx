@@ -54,7 +54,7 @@ export default function EmailBanner() {
         radius="md"
       >
         <Text size="sm" mb="xs" weight={500}>
-          Get Notified when I Add new Music
+          Get Notified When I Add New Music/Shows
         </Text>
 
         <Group align="flex-end">
