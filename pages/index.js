@@ -45,10 +45,15 @@ export default function Home({ data }) {
         }}
       >
         <Navbar />
-        <div className="flex justify-center items-center pt-8 md:pt-2  overflow-x-hidden">
+        <div className="flex justify-center items-center pt-8 md:pt-2  overflow-x-hidden ">
           <GlassPlayer />
         </div>
-        {/* |<ChatModal/> */}
+        {/* <div className=" whitespace-pre-wrap p-5 bg-black/80">
+          <div></div>
+          {data?.lyrics}
+        </div> */}
+        {/* {JSON.stringify()} */}
+        {/* |<ChatModal /> */}
         {/* <PayPalDonate /> */}
       </div>
       {/* <AblyChatComponent /> */}
