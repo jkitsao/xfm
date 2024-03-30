@@ -40,7 +40,7 @@ export default function Home({ data }) {
       <div
         className="h-full min-h-screen glass_player overflow-y-hidden overflow-x-hidden"
         style={{
-          backgroundImage: `url(${data?.art || imageURL})`,
+          backgroundImage: `url(${imageURL})`,
           // backgroun-----dImage: `url(${imageURL})`,
         }}
       >
@@ -63,8 +63,8 @@ export async function getServerSideProps() {
     const res = await fetch(`https://studio.xfm.co.ke/api/nowplaying/xfm`);
     const data = await res.json();
     // Pass data to the page via props
-    console.log({ nowplaying: data.now_playing.song });
-    return { props: { data: data.now_playing.song } };
+    console.log({ nowplaying: data[0].now_playing.song });
+    return { props: { data: data[0].now_playing.song } };
   } catch (error) {
     console.error(error);
     return error;

@@ -10,7 +10,7 @@ import { createDirectus, rest, authentication } from "@directus/sdk";
 // Storage adapter where authentication state (token & expiration) is stored.
 // const storage = isBrowser ? new LocalStorage() : sessionstorage;
 
-const directus = createDirectus("https://backstage.fullstack.co.ke/")
+const directus = createDirectus("https://playbox.kitsao.lol/")
   .with(authentication())
   .with(rest());
 

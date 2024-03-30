@@ -10,9 +10,9 @@ import ShareComp from "../components/share";
 import PlayWith from "../components/playwith/PlayWith";
 import ChatModal from "../components/chat/ChatModal";
 // import Helmet from '../components/helmet/comp/HelmetComp'
-import { useChannel } from "../components/chat/AblyReactEffect";
-import RequestModal from "../components/request/RequestModal";
-import PayPalDonate from "../components/Donate/PayPalDonate";
+// import { useChannel } from "../components/chat/AblyReactEffect";
+// import RequestModal from "../components/request/RequestModal";
+// import PayPalDonate from "../components/Donate/PayPalDonate";
 
 function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
   const [nowPlaying, setNowPlaying] = useState("");
@@ -40,17 +40,17 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
               <section className="bg-gray-900/70 shadow-xl shadow-gray-600/70 p-3 rounded-md">
                 <iframe
                   src="https://studio.xfm.co.ke/public/xfm.co.ke/embed?theme=dark"
-                  frameBorder={0}
+                  // frameBorder={0}
                   style={{ width: "100%", minHeight: 150, border: 0 }}
                 />
               </section>
-              <section className="my-3 p-3 pb-5 bg-gray-900/60 shadow-xl  rounded-lg">
-                <div className="text-sm py-3 text-gray-300 ">
+              <section className="my-3 p-3 pb-5 bg-gray-900/60 shadow-xl rounded-lg">
+                <div className="text-sm py-3 text-gray-300">
                   <span>AutoDJ History</span>
                 </div>
                 <iframe
                   src="https://studio.xfm.co.ke/public/xfm.co.ke/history?theme=dark"
-                  frameBorder={0}
+                  // frameBorder={0}
                   style={{ width: "100%", minHeight: 250, border: 0 }}
                 />
               </section>
