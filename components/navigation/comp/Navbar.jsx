@@ -17,7 +17,7 @@ function Navbar() {
           alt="logo"
           className="w-12 h-12 rounded shadow-xl shadow-red-700 animate-pulse object-contain mr-2"
         /> */}
-        <span className="text-md text-center leading-tight max-w-[20rem]">
+        <span className="text-md inline-flex px-5 text-center leading-tight max-w-[20rem]">
           Rock and Alternative Music 24/7
         </span>
       </div>
