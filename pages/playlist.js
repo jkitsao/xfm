@@ -5,12 +5,14 @@ export default function catalogue({ data }) {
   return (
     <div className="">
       <HelmetComp data={data} />
-      <iframe
-        src="https://studio.xfm.co.ke/public/xfm.co.ke/ondemand/embed?theme=dark"
-        frameBorder={0}
-        allowTransparency="true"
-        style={{ width: "100%", minHeight: 750, border: 0 }}
-      />
+      <div className="lg:w-3/4 lg:mx-auto">
+        <iframe
+          src="https://studio.xfm.co.ke/public/xfm.co.ke/ondemand/embed?theme=dark"
+          frameBorder={0}
+          allowTransparency="true"
+          style={{ width: "100%", minHeight: 750, border: 0 }}
+        />
+      </div>
     </div>
   );
 }
