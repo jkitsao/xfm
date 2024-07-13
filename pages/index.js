@@ -40,7 +40,7 @@ export default function Home({ data }) {
       <div
         className="h-full min-h-screen glass_player overflow-y-hidden overflow-x-hidden"
         style={{
-          backgroundImage: `url(${imageURL})`,
+          backgroundImage: `url(${data?.art})`,
           // backgroun-----dImage: `url(${imageURL})`,
         }}
       >

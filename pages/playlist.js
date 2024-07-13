@@ -10,7 +10,7 @@ export default function catalogue({ data }) {
           src="https://studio.xfm.co.ke/public/xfm.co.ke/ondemand/embed?theme=dark"
           frameBorder={0}
           allowTransparency="true"
-          style={{ width: "100%", minHeight: 750, border: 0 }}
+          style={{ width: "100%", minHeight: 750, border: 0 }} 
         />
       </div>
     </div>
