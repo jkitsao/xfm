@@ -7,12 +7,12 @@ function ByKitsao() {
         <span className="text-blue-500/90 block overflow-hidden bg-black/30 rounded-sm px-1">
           by
           <a
-            href="https://kitsao.birdbox.studio/"
+            href="https://stream.kitsao.lol/"
             target="_blank"
             rel="noreferrer"
             className="mx-1 underline p-1  "
           >
-            kitsao
+            streambox
           </a>
         </span>
       </div>
