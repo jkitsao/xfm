@@ -5,14 +5,13 @@ function ByKitsao() {
     <div className="w-full py-1 flex justify-center sticky bottom-0  mb-1 overflow-y-hidden">
       <div className="text-xs lg:text-sm font-semibold font-mono overflow-y-hidden  p-1">
         <span className="text-blue-500/90 block overflow-hidden bg-black/30 rounded-sm px-1">
-          by
           <a
-            href="https://stream.kitsao.lol/"
-            target="_blank"
-            rel="noreferrer"
+            href="#"
+            // target="_blank"
+            // rel="noreferrer"
             className="mx-1 underline p-1  "
           >
-            streambox
+            kitsao@stream.ke
           </a>
         </span>
       </div>
