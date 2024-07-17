@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import axios from "axios";
 import { useDisclosure } from "@mantine/hooks";
 import { Dialog, Group, Button, TextInput, Text } from "@mantine/core";
 //Import necessary modules from the Directus SDK
@@ -22,12 +22,19 @@ export default function EmailBanner() {
       localStorage.setItem("subscribed", "true");
       close();
       setLoading(false);
-      return showNotification({
+      showNotification({
         title: " Cheers!. 🎉",
         message:
           " A link will be sent to your Email. Welcome to our community!🚀 ",
         autoClose: 4000,
       });
+      // send email
+      return axios
+        .post("/api/emails", {
+          email: email,
+        })
+        .then((response) => console.log("Success:", response.data))
+        .catch((error) => console.error("Error:", error));
     } catch (error) {
       console.error("Error subscribing:", error);
       // close();
