@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       // Send an email using a template
       await client.sendEmailWithTemplate({
         From: "kitsao@stream.ke",
-        To: req.body.recepient,
+        To: req.body.email,
         TemplateAlias: "playlist-notification",
         TemplateModel: {
           product_url: "https://www.xfm.co.ke",
@@ -22,7 +22,14 @@ export default async function handler(req, res) {
           //   name: req.body.name,
           //   amount: req.body.amount,
           //   title: req.body.title,
-          playlist_url: req.body.url,
+          attachment_details: [
+            {
+              playlist_url: "https://www.xfm.co.ke/playlist",
+              //   attachment_size: "attachment_size_Value",
+              //   attachment_type: "attachment_type_Value"
+            },
+          ],
+          //   playlist_url: "https://www.xfm.co.ke/playlist",
         },
       });
 
