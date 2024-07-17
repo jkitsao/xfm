@@ -61,9 +61,9 @@ function GlassPlayer({ isPlayin, updateVolume, volume, isReady }) {
           {/* <div className="w-full p-2 flex justify-center">
             <PayPalDonate />
           </div> */}
-          <div className="py-2 border-b border-gray-900">
+          {/* <div className="py-2 border-b border-gray-900">
             <ByKitsao />
-          </div>
+          </div> */}
           {/* <section
             className="my-3 p-3 pb-5 bg-gray-900/60 shadow-xl  rounded-lg"
             id="scheduled"
