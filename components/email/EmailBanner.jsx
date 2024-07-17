@@ -25,7 +25,7 @@ export default function EmailBanner() {
       return showNotification({
         title: " Cheers!. 🎉",
         message:
-          " You have successfully subscribed. Welcome to our community!🚀 ",
+          " A link will be sent to your Email. Welcome to our community!🚀 ",
         autoClose: 4000,
       });
     } catch (error) {
@@ -54,7 +54,7 @@ export default function EmailBanner() {
         radius="md"
       >
         <Text size="sm" mb="xs" weight={500}>
-          Get Playlist Access
+          Get Playlist Access, 2k+ songs
         </Text>
         <Group align="flex-end">
           <TextInput
